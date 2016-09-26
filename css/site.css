@@ -1,0 +1,184 @@
+html,
+body {
+    height: 100%;
+}
+
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+.color{
+    border: 1px solid silver;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.color-silver{background:silver;}
+.color-white{background:white;}
+.color-black{background:black;}
+
+.color-img-wrapper{
+    height:150px;
+    padding:10px;
+}
+
+.header_contact {
+    padding-top: 20px;
+    font-size: 20px;
+}
+.btn-rent, .btn-calc{
+    /*width:100%;*/
+}
+
+.priceRent{
+    font-size: 30px;
+}
+
+.alert-warning, .alert-info{
+    color:#000;
+}
+
+.alert-info-satellite{
+    font-size: 20px;
+    padding: 7px 20px;
+}
+
+.alert-info-empty{
+    padding:5px 0px;
+}
+
+.alert-warning-satellite{
+    background-color: #f0f0ef;
+    border-color: #ccc;
+        height: 313px;
+    margin-top: 28px;
+    overflow-y: scroll;
+}
+
+.btn-rules{
+    font-weight: normal;
+    color: #337ab7;
+    border-radius: 0;
+}
+
+.datepicker-inline {
+    margin: 0px auto;
+}
+
+/*Owl Carousel*/
+
+#owl-demo .item{
+  
+  padding: 10px 0px;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#owl-demo .item>a>img{
+width:100%;
+}
+
+.customNavigation{
+  text-align: center;
+}
+//use styles below to disable ugly selection
+.customNavigation a{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*End Owl Carousel*/
