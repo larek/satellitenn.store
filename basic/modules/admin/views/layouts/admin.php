@@ -37,9 +37,10 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Главная', 'url' => ['/admin/default/index']],
-            // ['label' => 'Калькулятор', 'url' => ['/admin/calcdata/update', 'id' => 1]],
-            // ['label' => 'Контент', 'url' => ['/admin/content/update', 'id' => 1]],
-            // ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Категории', 'url' => ['/admin/category/index']],
+            ['label' => 'Производители', 'url' => ['/admin/vendor/index']],
+            ['label' => 'Товары', 'url' => ['/admin/product/index']],
+            
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
