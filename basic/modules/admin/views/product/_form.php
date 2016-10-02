@@ -19,9 +19,12 @@ use yii\helpers\ArrayHelper;
     <?php $form = ActiveForm::begin(); ?>
 <div class="row">
     <div class="col-md-6">
-        
+        <div class="input-group">
         <?= $form->field($model, 'category_id')->dropDownList(ArrayHelper::map(Category::find()->all(),'id','title')) ?>
-    
+        <div class="input-group-btn">
+            <span class="btn btn-default">Создать группу</span>
+        </div>
+        </div>
         <?= $form->field($model, 'vendor_id')->dropDownList(ArrayHelper::map(Vendor::find()->all(),'id','title')) ?>
 
         <?= $form->field($model, 'title')->textInput(['maxlength' => 250]) ?>

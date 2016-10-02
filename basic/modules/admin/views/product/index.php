@@ -26,12 +26,25 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+           // ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'category_id',
-            'vendor_id',
+            //'id',
             'title',
+            [
+                'attribute' => 'category_id',
+                'format' => 'raw',
+                'value' => function($data){
+                    return $data->category_id == 0 ? 'Без категории' : $data->category->title;
+                     
+                }
+            ],
+            [
+                'attribute' => 'vendor_id',
+                'format' => 'raw',
+                'value' => function($data){
+                    return $data->vendor_id == 0 ? 'Производитель не выбран' : $data->vendor->title;
+                }
+            ],
             'skuVendor',
             // 'sku',
             // 'photo',

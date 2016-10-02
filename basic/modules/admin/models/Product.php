@@ -3,6 +3,8 @@
 namespace app\modules\admin\models;
 
 use Yii;
+use app\modules\admin\models\Category;
+use app\modules\admin\models\Vendor;
 
 /**
  * This is the model class for table "product".
@@ -21,6 +23,12 @@ use Yii;
  */
 class Product extends \yii\db\ActiveRecord
 {
+    public function getCategory(){
+        return $this->hasOne(Category::className(),['id' => 'category_id']);
+    }
+    public function getVendor(){
+        return $this->hasOne(Vendor::className(),['id' => 'vendor_id']);
+    }
     /**
      * @inheritdoc
      */
