@@ -60,7 +60,7 @@ class CategoryController extends Controller
 
         // if ($model->load(Yii::$app->request->post()) && $model->save()) {
         if (Yii::$app->request->post()) {
-           if(isset($_FILES['Category'])){
+           if($_FILES['Category']['name']['image']!=""){
               $errors= array();
               $file_name = $_FILES['Category']['name']['image'];
               $file_size = $_FILES['Category']['size']['image'];
@@ -90,11 +90,17 @@ class CategoryController extends Controller
               }else{
                  print_r($errors);
               }
-           }
-
             $model->load(Yii::$app->request->post());
             $model->image = $file_new_name;
+           }else{
+            $model->load(Yii::$app->request->post());
+          }
+
+            
             $model->save();
+            $modelUrl = Category::findOne($model->id);
+            $modelUrl->url = Yii::$app->str2url->parse($model->title." ".$model->id);
+            $modelUrl->save();
             return $this->redirect(['view', 'id' => $model->id]);
 
         } else {
@@ -159,6 +165,9 @@ class CategoryController extends Controller
 
             
             $model->save();
+            $modelUrl = Category::findOne($model->id);
+            $modelUrl->url = Yii::$app->str2url->parse($model->title." ".$model->id);
+            $modelUrl->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [

@@ -14,6 +14,9 @@ $config = [
         ]
     ],
     'components' => [
+        'str2url' => [
+            'class' => 'app\components\str2url',
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'sjVhmKYfTYxZ9IzsJbpGLgMlZ_9BQIMo',

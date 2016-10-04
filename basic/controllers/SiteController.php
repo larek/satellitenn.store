@@ -12,6 +12,8 @@ use app\models\ContactForm;
 use app\models\Calc;
 use app\modules\admin\models\Content;
 use app\modules\admin\models\Calcdata;
+use app\modules\admin\models\Product;
+use app\modules\admin\models\Category;
 
 class SiteController extends Controller
 {
@@ -55,6 +57,23 @@ class SiteController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
+    }
+
+
+    public function actionUrl(){
+        $model = Product::find()->all();
+        foreach($model as $item){
+            $newModel = Product::findOne($item->id);
+            $newModel->url = Yii::$app->str2url->parse($item->title." ".$item->id);
+            $newModel->save();
+        }
+
+        $model = Category::find()->all();
+        foreach($model as $item){
+            $newModel = Category::findOne($item->id);
+            $newModel->url = Yii::$app->str2url->parse($item->title." ".$item->id);
+            $newModel->save();
+        }
     }
 
     /**
@@ -184,4 +203,6 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    
 }

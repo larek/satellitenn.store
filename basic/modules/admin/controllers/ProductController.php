@@ -65,7 +65,7 @@ class ProductController extends Controller
 
         // if ($model->load(Yii::$app->request->post()) && $model->save()) {
         if (Yii::$app->request->post()) {
-           if(isset($_FILES['Product'])){
+           if($_FILES['Product']['name']['photo']!=""){
               $errors= array();
               $file_name = $_FILES['Product']['name']['photo'];
               $file_size = $_FILES['Product']['size']['photo'];
@@ -95,11 +95,17 @@ class ProductController extends Controller
               }else{
                  print_r($errors);
               }
-           }
-
             $model->load(Yii::$app->request->post());
             $model->photo = $file_new_name;
+           }else{
+            $model->load(Yii::$app->request->post());
+          }
+
+            
             $model->save();
+            $modelUrl = Product::findOne($model->id);
+            $modelUrl->url = Yii::$app->str2url->parse($model->title." ".$model->id); 
+            $modelUrl->save();
             return $this->redirect(['view', 'id' => $model->id]);
 
         } else {
@@ -164,6 +170,9 @@ class ProductController extends Controller
 
             
             $model->save();
+            $modelUrl = Product::findOne($model->id);
+            $modelUrl->url = Yii::$app->str2url->parse($model->title." ".$model->id); 
+            $modelUrl->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
