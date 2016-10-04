@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				<td><?= $model->price?></td>
 			</tr>
 		</table>
-		<span class="btn btn-default btn-add" id='<?= $model->id?>'>Купить</span>
+		<span class="btn btn-default btn-add" id='<?= $model->id?>'>В корзину</span>
 	</div>
 	<div class="col-md-6">
 		<?= Html::img('/uploads/'.$model->photo, ['class' => 'img img-responsive'])?>

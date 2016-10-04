@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
   <div class="col-sm-3 col-md-3">
     <div class="thumbnail">
-      <?= Html::img('/uploads/300x200/'.$model->photo, ['class' => 'img img-responsive']);?>
+      <?= Html::a(Html::img('/uploads/300x200/'.$model->photo, ['class' => 'img img-responsive']),['site/product','id' => $model->url]);?>
       <div class="caption">
       	<div class="item_title">
         	<h5><?= Html::a($model->title,['site/product', 'id' => $model->url])?></h5>
