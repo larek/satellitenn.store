@@ -7,11 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
-use app\models\LoginForm;
-use app\models\ContactForm;
-use app\models\Calc;
-use app\modules\admin\models\Content;
-use app\modules\admin\models\Calcdata;
+use yii\data\ActiveDataProvider;
 use app\modules\admin\models\Product;
 use app\modules\admin\models\Category;
 
@@ -83,32 +79,39 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $dataProvider = new ActiveDataProvider([
+                'query' => Category::find(),
+                'pagination' => [
+                    'pageSize' => 20
+                ]
+            ]);
+        return $this->render('index',[
+                'dataProvider' => $dataProvider
+            ]);
     }
 
-    public function actionGetcalc(){
-        $model = Calcdata::findOne(1);
-        $data = [
-            'A' => $model->a,
-            'B' => $model->b,
-            'C' => $model->c,
-            'D' => $model->d,
-            'E' => $model->e,
-            'F' => $model->f,
-            'G' => $model->g,
-            'H' => $model->h,
-            'I' => $model->i,
-            'J' => $model->j,
-            'K' => $model->k,
-            'L' => $model->l,
-            'M' => $model->m
-        ];
-        // foreach ($model as $key => $value) {
-        //     $data[$value->id]['title']  = $value->title;
-        //     $data[$value->id]['value']  = $value->value;
-        // }
-        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+    public function actionCategory($id){
+        $category = Category::find()->where(['url' => $id])->one();
+        $dataProvider = new ActiveDataProvider([
+                'query' => Product::find()->where(['category_id' => $category->id]),
+                'pagination' => [
+                    'pageSize' => 20
+                ]
+            ]);
+        return $this->render('category',[
+                'dataProvider' => $dataProvider
+            ]);
     }
+
+    public function actionProduct($id){
+        $model = Product::find()->where(['url' => $id])->one();
+        
+        return $this->render('product',[
+                'model' => $model
+            ]);
+    }
+
+   
 
     public function actionSend(){
         $content = $_POST['result'];

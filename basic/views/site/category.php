@@ -8,6 +8,6 @@ $this->title = 'Satellitenn Store';
 <div class="row">
 <?= ListView::widget([
 	'dataProvider' => $dataProvider,
-	'itemView' => '_itemCategory'
+	'itemView' => '_itemProduct'
 ]);?>
 </div>
