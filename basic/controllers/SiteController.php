@@ -91,22 +91,24 @@ class SiteController extends Controller
     }
 
     public function actionCategory($id){
-        $category = Category::find()->where(['url' => $id])->one();
+        $model= Category::find()->where(['url' => $id])->one();
         $dataProvider = new ActiveDataProvider([
-                'query' => Product::find()->where(['category_id' => $category->id]),
+                'query' => Product::find()->where(['category_id' => $model->id]),
                 'pagination' => [
                     'pageSize' => 20
                 ]
             ]);
         return $this->render('category',[
+                'model' => $model,
                 'dataProvider' => $dataProvider
             ]);
     }
 
     public function actionProduct($id){
         $model = Product::find()->where(['url' => $id])->one();
-        
+        $category = Category::findOne($model->category_id);
         return $this->render('product',[
+                'category' => $category,
                 'model' => $model
             ]);
     }
