@@ -72,6 +72,20 @@ class SiteController extends Controller
         }
     }
 
+    public function actionSess(){
+        $session = Yii::$app->session;
+        $session->open();
+        print_r($_SESSION);
+        $session->close();
+    }
+
+    public function actionAdd(){
+        $session = Yii::$app->session;
+        $session->open();
+        $_SESSION['product'][$_POST['id']] = 1;
+        $session->close();
+    }
+
     /**
      * Displays homepage.
      *
@@ -98,8 +112,11 @@ class SiteController extends Controller
                     'pageSize' => 20
                 ]
             ]);
+        $cart = $this->getCart();
         return $this->render('category',[
                 'model' => $model,
+                'cart' => $cart,
+                'url' => $id,
                 'dataProvider' => $dataProvider
             ]);
     }
@@ -207,6 +224,15 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    protected function getCart(){
+        $session = Yii::$app->session;
+        $session->open();
+        $product = isset($_SESSION['product']) ? $_SESSION['product'] : false;
+        $session->close();
+
+        return $product;
     }
 
     

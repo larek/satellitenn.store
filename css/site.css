@@ -1,8 +1,17 @@
 html,
 body {
-    height: 100%;
+    padding-top: 30px;
+    background: #f5f8fa;
+    font-family: 'Open Sans';
 }
 
+h1 {
+    font-size: 27px !important;
+}
+
+.mt0 {
+    margin-top: 0px !important;
+}
 
 .wrap {
     min-height: 100%;
@@ -13,13 +22,6 @@ body {
 
 .wrap > .container {
     padding: 70px 15px 20px;
-}
-
-.footer {
-    height: 60px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
 }
 
 .jumbotron {
@@ -37,8 +39,11 @@ body {
     font-style: italic;
 }
 
+
 /* add sorting icons to gridview sort links */
-a.asc:after, a.desc:after {
+
+a.asc:after,
+a.desc:after {
     position: relative;
     top: 1px;
     display: inline-block;
@@ -50,11 +55,13 @@ a.asc:after, a.desc:after {
 }
 
 a.asc:after {
-    content: /*"\e113"*/ "\e151";
+    content: /*"\e113"*/
+    "\e151";
 }
 
 a.desc:after {
-    content: /*"\e114"*/ "\e152";
+    content: /*"\e114"*/
+    "\e152";
 }
 
 .sort-numerical a.asc:after {
@@ -91,105 +98,412 @@ a.desc:after {
     margin: 0 0 15px 0;
 }
 
-.color{
-    border: 1px solid silver;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    display: inline-block;
+
+/*treeview*/
+
+div.panel:first-child {
+    margin-top: 20px;
 }
 
-.color-silver{background:silver;}
-.color-white{background:white;}
-.color-black{background:black;}
+div.treeview {
+    min-width: 100px;
+    min-height: 100px;
+    max-height: 256px;
+    overflow: auto;
+    padding: 4px;
+    margin-bottom: 20px;
+    color: #369;
+    border: solid 1px;
+    border-radius: 4px;
+}
 
-.color-img-wrapper{
-    height:150px;
+div.treeview ul:first-child:before {
+    display: none;
+}
+
+.treeview,
+.treeview ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #369;
+}
+
+.treeview ul {
+    margin-left: 1em;
+    position: relative
+}
+
+.treeview ul ul {
+    margin-left: .5em
+}
+
+.treeview ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 1px solid;
+    /* creates a more theme-ready standard for the bootstrap themes */
+    bottom: 15px;
+}
+
+.treeview li {
+    margin: 0;
+    padding: 0 1em;
+    position: relative
+}
+
+.treeview ul li:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 0;
+    border-top: 1px solid;
+    margin-top: -1px;
+    position: absolute;
+    top: 1em;
+    left: 0
+}
+
+.tree-indicator {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.treeview li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.treeview li a.active {
+    font-weight: bold;
+}
+
+.treeview li a:hover {
+    text-decoration: underline;
+}
+
+.treeview li button,
+.treeview li button:active,
+.treeview li button:focus {
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    background: transparent;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    outline: 0;
+}
+
+
+/*end treeiew*/
+
+
+/*header search block*/
+
+.b-morda-search-decor {
+    background-color: #F00;
+    padding: 0;
+    position: relative;
+    width: 753px;
+    height: 64px;
+}
+
+.b-morda-search-decor-r {
+    padding: 4px 3px 9px 4px;
+    overflow: hidden;
+}
+
+.b-morda-search-table {
+    width: 100%;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.b-search-options {
+    margin-top: 4px;
+    margin-left: 1px;
+    color: #222;
+    text-shadow: #FCEDB0 0 1px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.b-morda-search__arr_c {
+    position: absolute;
+    left: 100%;
+    overflow: hidden;
+    width: 17px;
+    height: 100%;
+    top: 0;
+}
+
+.b-morda-search__arr {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #F00;
+    _border-color: #000 #000 #000 #f00;
+    _filter: progid: DXImageTransform.Microsoft.Chroma(color='#000000');
+    position: absolute;
+    top: 50%;
+    margin-top: -80px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 80px 0 80px 40px;
+    border-color: rgba(255, 255, 255, 0)rgba(255, 255, 255, 0)rgba(255, 255, 255, 0)#F00;
+    line-height: 0;
+    -moz-border-end-style: dotted;
+    -webkit-transform: rotate(360deg);
+}
+
+#input1 {
+    width: 650px;
+    position: relative;
+    z-index: 1000;
+}
+
+.rand_exmpl {
+    border-bottom: 1px dotted;
+    cursor: pointer;
+}
+
+
+/*end search block*/
+
+.quicksearch_result {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 5px 10px #727377;
+    background: white;
+    width:300px;
+}
+
+.header {
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-color: #d3e0e9;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    padding: 20px 40px;
+}
+
+.header:hover {
+    /*box-shadow: 0px 0px 5px silver;*/
+}
+
+span.cartInformer {
+    position: absolute;
+    border-radius: 10px;
+    background: #e53236;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin: -10px 0px;
+}
+
+.header_wrapper {
+    margin-bottom: 15px;
+}
+
+.content {
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-color: #d3e0e9;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    padding: 15px 40px;
+    min-height:500px;
+}
+
+.content-grey {}
+
+.footer {
+    margin: 15px 0px;
+    background: #494a4c;
+    border-radius: 5px;
+    border: 1px solid #d0cfcf;
+    padding: 15px 40px;
+    color: #d0cfcf;
+}
+
+#navbar {
+    padding: 0px 26px;
+}
+
+.summary {
+    margin-bottom: 15px;
+}
+
+.thumbnail {
+    padding: 0px;
+    border: 1px solid #ececec;
+    transition:box-shadow 0.5s;
+}
+.thumbnail:hover{
+    box-shadow: 0px 0px 30px rgb(219, 219, 219);
+}
+
+.thumbnail img{
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.breadcrumb {
+    padding: 0px 0px !important;
+    background: none;
+    font-size: 12px;
+}
+
+.logo_item a {
+    padding: 2px 15px !important;
+}
+
+.navbar-nav > li > a {
+    padding: 17px 15px;
+}
+
+.logo_item img {
+    width: 105px;
+    margin-top: 2px;
+}
+
+.content_wrapper {
+    margin-top: 15px;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+.footer-logo {
+    width: 150px;
+}
+
+.main_page_list {
+    padding: 0px;
+}
+
+.main_page_list li {
+    list-style: none;
+}
+
+.cross {
+        position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    background: #777;
+    margin: 294px 539px;
+    background-size: 100px;
+}
+
+span.cross-line-1 {
+    display: block;
+    width: 300px;
+    border-bottom: 1px solid silver;
+    margin: 5px -140px;
+}
+
+span.cross-line-2 {
+    display: block;
+    height: 300px;
+    border-left: 1px solid silver;
+    margin: -150px 4px;
+}
+
+.main_page_grid_item {
+    height: 270px;
+}
+
+
+
+
+.table-header {
+    border: 1px solid #dddddd;
+    border-bottom: none;
+    background: #f9f9f9;
+    padding: 10px 20px;
+}
+
+.main_background_block {
+    position: absolute;
+    height: 560px;
+    background: url(http://dentalru.ru/files/office/panorama_3.jpg) no-repeat;
+    width: 1140px;
+    background-size: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    /*transition:background-size 3s;*/
+    z-index: 0;
+}
+
+.main_background_block:hover {
+    /* The same goes for properties like background-position and repeat */
+    /*background-size:110%;*/
+}
+
+.jumbotron {
+    position: relative;
+    z-index: 10;
+}
+
+.fours_mainpage_blocks {
+    margin-top: 0px;
+}
+
+.main_banner_text {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0px 20px;
+    width: 1140px;
+    margin: -16px -26px;
+    height: 552px;
+    color: black;
+}
+
+.item-grid {
+    padding-left: 0px;
+}
+
+.cart_item {
+    border-bottom: 1px dashed silver;
+    padding: 15px 0px;
+    border-right: 1px solid silver;
+}
+
+.list-block{
+    -moz-column-count: 5; /* Для Firefox */
+    -webkit-column-count: 5; /* Для Safari и Chrome */
+    column-count: 5;
+    text-transform: capitalize;
+}
+
+.item-content{
     padding:10px;
 }
 
-.header_contact {
-    padding-top: 20px;
-    font-size: 20px;
+.item-title{
+    height:69px;
 }
-.btn-rent, .btn-calc{
-    /*width:100%;*/
-}
-
-.priceRent{
-    font-size: 30px;
+.item-description {
+    height: 69px;
 }
 
-.alert-warning, .alert-info{
-    color:#000;
-}
-
-.alert-info-satellite{
-    font-size: 20px;
-    padding: 7px 20px;
-}
-
-.alert-info-empty{
-    padding:5px 0px;
-}
-
-.alert-warning-satellite{
-    background-color: #f0f0ef;
-    border-color: #ccc;
-        height: 313px;
-    margin-top: 28px;
-    overflow-y: scroll;
-}
-
-.btn-rules{
-    font-weight: normal;
-    color: #337ab7;
-    border-radius: 0;
-}
-
-.datepicker-inline {
-    margin: 0px auto;
-}
-
-/*Owl Carousel*/
-
-#owl-demo .item{
-  
-  padding: 10px 0px;
-  margin: 10px;
-  color: #FFF;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  text-align: center;
-}
-
-#owl-demo .item>a>img{
-width:100%;
-}
-
-.customNavigation{
-  text-align: center;
-}
-//use styles below to disable ugly selection
-.customNavigation a{
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-/*End Owl Carousel*/
-
-.bar {
-    height: 18px;
-    background: green;
+.title-divider{
+    width: 100px;
+    border: 1px solid #c0373d;
+    position: absolute;
+    margin-top: -5px;
 }
 
 .item_title {
     height: 50px;
-    overflow-y: hidden;
-    display: inline-block;
 }

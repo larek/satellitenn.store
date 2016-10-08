@@ -65,6 +65,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'add' => 'site/add',
                 'category/<id>' => 'site/category',
                 'product/<id>' => 'site/product',
                 'admin/content/<id>' => 'admin/content/update'

@@ -19,12 +19,12 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
+        'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300',
+        '/bower_components/font-awesome/css/font-awesome.min.css',
         
     ];
     public $js = [
-
-        'js/script.js'
-
+        'js/site.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
