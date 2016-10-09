@@ -19,6 +19,18 @@ $(document).ready(function() {
 		});
 	});
 
+	$(".btn-search").click(function(){
+		var query = $(".search-input").val();
+		window.location = "/search/" + query;
+	});
+
+	$(".search-input").keyup(function(e){
+		var query = $(this).val();
+		if(e.keyCode == 13){
+        	window.location = "/search/" + query;
+    	}
+	});
+
 	function updateCartInformer(){
 		$.post('/site/cartcount').done(function(res){
 			if(res>0){

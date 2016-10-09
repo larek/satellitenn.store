@@ -142,6 +142,22 @@ class SiteController extends Controller
             ]);
     }
 
+    public function actionSearch($id){
+        $dataProvider = new ActiveDataProvider([
+                'query' => Product::find()->where(['like','title',$id]),
+                'pagination' => [
+                    'pageSize' => 20
+                ]
+            ]);
+        $cart = $this->getCart();
+        return $this->render('search',[
+                'cart' => $cart,
+                'url' => $id,
+                'dataProvider' => $dataProvider
+            ]);
+    }
+
+
     public function actionProduct($id){
         $model = Product::find()->where(['url' => $id])->one();
         $category = Category::findOne($model->category_id);

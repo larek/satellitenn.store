@@ -67,7 +67,7 @@ $config = [
             'rules' => [
                 'add' => 'site/add',
                 'remove' => 'site/remove',
-                
+                'search/<id>' => 'site/search',
                 'cart' => 'site/cart',
                 'category/<id>' => 'site/category',
                 'product/<id>' => 'site/product',

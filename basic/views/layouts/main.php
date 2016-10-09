@@ -71,9 +71,9 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
 
                 <div class="navbar-form navbar-left" role="search">
                     <div class="form-group">
-                        <input type="text" class="header_search form-control " placeholder="Быстрый поиск ">
+                        <input type="text" class="search-input form-control " placeholder="Поиск ">
                     </div>
-                    <button type="submit" class="btn btn-default"><i class='fa fa-search'></i> Найти</button>
+                    <button type="submit" class="btn btn-default btn-search"><i class='fa fa-search'></i> Найти</button>
 
                     <div class="list-group quicksearch_result">
                         
