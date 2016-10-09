@@ -60,10 +60,49 @@ class SiteController extends Controller
 
 
     public function actionMerge(){
-        $model = Thule::find()->all();
-        foreach($model as $item){
-            echo $item->price."<br>";
-        }
+        
+        // $model = Thule::find()->all();
+        // foreach($model as $item){
+        //     $new = new Product;
+        //     $new->category_id = 10;
+        //     $new->vendor_id = 7;
+        //     $new->title = $item->title;
+        //     $new->skuVendor = $item->sku;
+        //     $new->sku = '';
+        //     $new->photo = 'thule_product.jpg';
+        //     $new->description = $item->description;
+        //     $new->priceVendor = '';
+        //     $new->price = $item->price;
+        //     $new->available = 1;
+        //     $new->url = '';
+        //     $new->save();
+        //     echo $item->price."<br>";
+        // }
+
+        // $model = Atlant::find()->all();
+
+        //  foreach($model as $item){
+        //     $new = new Product;
+        //     $new->category_id = 10;
+        //     $new->vendor_id = 3;
+        //     $new->title = $item->title;
+        //     $new->skuVendor = $item->sku;
+        //     $new->sku = '';
+        //     $new->photo = 'atlant_product.jpg';
+        //     $new->description = $item->description;
+        //     $new->priceVendor = $item->price_vendor;
+        //     $new->price = $item->price;
+        //     $new->available = 1;
+        //     $new->url = '';
+        //     $new->save();
+        //     echo $item->price."<br>";
+        //     echo $item->price_vendor."<br>";
+        //     echo $item->description."<br>";
+        //     echo $item->title."<br>";
+        //     echo $item->sku."<br>";
+        //     echo "<hr>";
+
+        // }
     }
 
     public function actionUrl(){
