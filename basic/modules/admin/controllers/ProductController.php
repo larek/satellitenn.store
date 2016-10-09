@@ -161,8 +161,8 @@ class ProductController extends Controller
             $model->load(Yii::$app->request->post());
             $model->photo = $file_new_name;
             //delete old photo
-            if(is_file("uploads/".$photo)){unlink("uploads/".$photo);}
-            if(is_file("uploads/300x200/".$photo)){unlink("uploads/300x200/".$photo);}
+            if(is_file("uploads/".$photo) && $photo!=="atlant_product.jpg" && $photo!=="thule_product.jpg"){unlink("uploads/".$photo);}
+            if(is_file("uploads/300x200/".$photo) && $photo!="thule_product.jpg" && $photo!=="thule_product.jpg"){unlink("uploads/300x200/".$photo);}
            }else{
             $model->load(Yii::$app->request->post());
             $model->photo = $photo;
@@ -192,8 +192,8 @@ class ProductController extends Controller
         $model = $this->findModel($id);
         $photo = $model->photo;
         //delete  photo
-            if(is_file("uploads/".$photo)){unlink("uploads/".$photo);}
-            if(is_file("uploads/300x200/".$photo)){unlink("uploads/300x200/".$photo);}
+            if(is_file("uploads/".$photo)  && $photo!=="atlant_product.jpg" && $photo!=="thule_product.jpg"){unlink("uploads/".$photo);}
+            if(is_file("uploads/300x200/".$photo)  && $photo!=="atlant_product.jpg" && $photo!=="thule_product.jpg"){unlink("uploads/300x200/".$photo);}
         $model->delete();
 
         return $this->redirect(['index']);
