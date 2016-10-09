@@ -66,6 +66,9 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'add' => 'site/add',
+                'remove' => 'site/remove',
+                
+                'cart' => 'site/cart',
                 'category/<id>' => 'site/category',
                 'product/<id>' => 'site/product',
                 'admin/content/<id>' => 'admin/content/update'

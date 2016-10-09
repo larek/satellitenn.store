@@ -24,7 +24,14 @@ $this->params['breadcrumbs'][] = $this->title;
 							<td><?= $model->price?></td>
 						</tr>
 					</table>
-                    <p><span class="btn btn-default btn-add" id='<?= $model->id?>'>В корзину</span></p>
+                    <? 
+                      if (isset($cart[$model->id])){
+                        echo Html::tag('span','Товар в корзине',['class' => 'btn btn-default disable', 'disabled' => 'disabled']);
+                      }
+                      else{
+                        echo Html::tag('span','В корзину',['class' => 'btn btn-default btn-add', 'id' => $model->id]);
+                      }
+                    ?>
                 </div>
                 <div class="col-md-6">
                     <?= Html::img('/uploads/'.$model->photo, ['class' => 'img img-responsive'])?>

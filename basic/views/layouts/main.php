@@ -85,7 +85,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
                     ],
                     'items' => [
                       //  ['label' => '<i class="fa fa-truck"></i> Доставка', 'url' => '#', 'encode' => false],
-                        ['label' => '<i class="fa fa-shopping-cart"></i> Корзина', 'url' => ['cart/index'], 'encode' => false, 'options' => ['class' => 'cartMenuItem']]
+                        ['label' => '<i class="fa fa-shopping-cart"></i> Корзина', 'url' => ['site/cart'], 'encode' => false, 'options' => ['class' => 'cartMenuItem']]
                     ]
                 ]);?>
                 

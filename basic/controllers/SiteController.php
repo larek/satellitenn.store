@@ -10,6 +10,9 @@ use yii\helpers\ArrayHelper;
 use yii\data\ActiveDataProvider;
 use app\modules\admin\models\Product;
 use app\modules\admin\models\Category;
+use app\modules\admin\models\Thule;
+use app\modules\admin\models\Atlant;
+
 
 class SiteController extends Controller
 {
@@ -56,6 +59,13 @@ class SiteController extends Controller
     }
 
 
+    public function actionMerge(){
+        $model = Thule::find()->all();
+        foreach($model as $item){
+            echo $item->price."<br>";
+        }
+    }
+
     public function actionUrl(){
         $model = Product::find()->all();
         foreach($model as $item){
@@ -84,6 +94,17 @@ class SiteController extends Controller
         $session->open();
         $_SESSION['product'][$_POST['id']] = 1;
         $session->close();
+    }
+
+    public function actionRemove(){
+        $session = Yii::$app->session;
+        $session->open();
+        unset($_SESSION['product'][$_POST['id']]);
+        $session->close(); 
+    }
+
+    public function actionCartcount(){
+        return count($this->getCart());
     }
 
     /**
@@ -124,12 +145,22 @@ class SiteController extends Controller
     public function actionProduct($id){
         $model = Product::find()->where(['url' => $id])->one();
         $category = Category::findOne($model->category_id);
+        $cart = $this->getCart();
         return $this->render('product',[
                 'category' => $category,
-                'model' => $model
+                'model' => $model,
+                'cart' => $cart
             ]);
     }
 
+    public function actionCart(){
+        $cart = array_keys($this->getCart());
+        $model = Product::find()->andWhere(['id' => $cart])->all();
+        return $this->render('cart',[
+                'model' => $model,
+                'cart' => $cart,
+            ]);
+    }
    
 
     public function actionSend(){
