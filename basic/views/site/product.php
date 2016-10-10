@@ -19,9 +19,13 @@ $this->params['breadcrumbs'][] = $this->title;
 							<td>Описание</td>
 							<td><?= $model->description?></td>
 						</tr>
+                        <tr>
+                            <td>Производитель</td>
+                            <td><?= $model->vendor->title?></td>
+                        </tr>
 						<tr>
 							<td>Цена</td>
-							<td><?= $model->price?></td>
+							<td><span class='price'><?= number_format($model->price,0," "," ")?> руб. </span></td>
 						</tr>
 					</table>
                     <? 

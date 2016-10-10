@@ -9,8 +9,11 @@ use yii\helpers\Html;
       <div class="item-title">
         <?= Html::a($model->title,['site/product','id' => $model->url]);?>
       </div>
-    <div class="item-description">
+    <div class="item-description text-center">
+    <p><?= $model->vendor->title;?></p>
+    <p><span class='price'><?= number_format($model->price,0," "," ");?> руб.</span></p>
     </div>
+    <div class="text-center">
     <? 
       if (isset($cart[$model->id])){
         echo Html::tag('span','Товар в корзине',['class' => 'btn btn-default disable', 'disabled' => 'disabled']);
@@ -19,6 +22,7 @@ use yii\helpers\Html;
         echo Html::tag('span','В корзину',['class' => 'btn btn-default btn-add', 'id' => $model->id]);
       }
     ?>
+    </div>
     </div>
   </div>
 </div>
