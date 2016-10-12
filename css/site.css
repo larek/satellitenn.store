@@ -536,3 +536,8 @@ span.cross-line-2 {
     font-size:12px;
 
 }
+
+.filter-input-group {
+    display: inline-block;
+    padding: 0px 20px 0px 0px;
+}

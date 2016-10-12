@@ -14,8 +14,9 @@ class Filters extends Widget{
 	public $url;
 
 	public function run(){
-		$category = Category::find()->where(['url' => $this->url])->one();
-		$product  = Product::find()->where(['category_id' => $category->id])->groupBy('vendor_id')->all();
+		$CurrentCategory = Category::find()->where(['url' => $this->url])->one();
+		$Category = Category::find()->all();
+		$product  = Product::find()->where(['category_id' => $CurrentCategory->id])->groupBy('vendor_id')->all();
 		$vendorIds = [];
 		foreach($product as $item){
 			array_push($vendorIds,$item->vendor_id);
@@ -30,15 +31,45 @@ class Filters extends Widget{
 					
 				]
 			]);
+
 		array_unshift($items, [
 				'label' => 'Любой',
 				'url' => Url::to(['site/category','id' => $this->url])
-			])
+			]);
+
+		$CategoryItems = ArrayHelper::toArray($Category, [
+				'app\modules\admin\models\Category' => [
+					'label' => 'title',
+					'url' => function($data){
+						return Url::to(['site/category','id' => $data->url]);
+					}
+					
+				]
+			]);
 		?>
 
+		<div class='filter-input-group input-group'>
+			<span class='filter-label'>Категория:</span><br>
+			<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+		 	<?
+			if(isset($_GET['id'])){
+				echo $CurrentCategory->title;
+			}else{
+				echo "Любая";
+			}
+			?>
+			<b class="caret"></b>
+			</a>
+		    <?php
+		        echo Dropdown::widget([
+		            'items' => $CategoryItems
+		        ]);
+		    ?>
+		</div>
+
 		
-		<div class='input-group'>
-			<span class='filter-label'>Производитель:</span>
+		<div class='filter-input-group input-group'>
+			<span class='filter-label'>Производитель:</span><br>
 			<a href="#" data-toggle="dropdown" class="dropdown-toggle">
 		 	<?
 			if(isset($_GET['vendor'])){
