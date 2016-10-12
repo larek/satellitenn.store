@@ -20,7 +20,6 @@ class Filters extends Widget{
 		foreach($product as $item){
 			array_push($vendorIds,$item->vendor_id);
 		}
-		
 		$model = Vendor::find()->where(['id' => $vendorIds])->all();
 		$items = ArrayHelper::toArray($model, [
 				'app\modules\admin\models\Vendor' => [
