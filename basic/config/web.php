@@ -69,8 +69,10 @@ $config = [
                 'remove' => 'site/remove',
                 'search/<id>' => 'site/search',
                 'cart' => 'site/cart',
+                'category/<vendor>/<id>' => 'site/category',
                 'category/<id>' => 'site/category',
                 'product/<id>' => 'site/product',
+                'admin/product/search/<id>' => 'admin/product/index',
                 'admin/content/<id>' => 'admin/content/update'
             ],
         ],

@@ -166,8 +166,12 @@ class SiteController extends Controller
 
     public function actionCategory($id){
         $model= Category::find()->where(['url' => $id])->one();
+        $query = Product::find()->where(['category_id' => $model->id]);
+        if(isset($_GET['vendor'])){
+            $query->andWhere(['vendor_id' => $_GET['vendor']]);
+        }
         $dataProvider = new ActiveDataProvider([
-                'query' => Product::find()->where(['category_id' => $model->id]),
+                'query' => $query,
                 'pagination' => [
                     'pageSize' => 20
                 ]

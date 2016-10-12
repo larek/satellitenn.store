@@ -424,14 +424,32 @@ span.cross-line-2 {
 }
 
 
-
-
 .table-header {
-    border: 1px solid #dddddd;
-    border-bottom: none;
-    background: #f9f9f9;
-    padding: 10px 20px;
+        background: #f9f9f9;
+        padding: 10px 53px;
+        margin: 0px 0px 10px -40px;
+    }
+
+@media (min-width: 768px){
+    .table-header {
+        width: 718px;
+    }
 }
+
+@media (min-width: 992px){
+    .table-header {
+        width: 938px;
+    }
+}
+
+@media (min-width: 1200px){
+    .table-header {
+        width: 1138px;
+    }
+}
+
+
+
 
 .main_background_block {
     position: absolute;
