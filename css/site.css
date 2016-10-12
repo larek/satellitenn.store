@@ -426,7 +426,7 @@ span.cross-line-2 {
 
 .table-header {
         background: #f9f9f9;
-        padding: 10px 53px;
+        padding: 15px 53px;
         margin: 0px 0px 10px -40px;
     }
 
@@ -529,4 +529,10 @@ span.cross-line-2 {
 .price {
     font-size: 18px;
     font-weight: bold;
+}
+
+.filter-label{
+    text-transform: uppercase;
+    font-size:12px;
+
 }

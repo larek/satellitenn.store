@@ -30,28 +30,32 @@ class Filters extends Widget{
 					
 				]
 			]);
-
+		array_unshift($items, [
+				'label' => 'Любой',
+				'url' => Url::to(['site/category','id' => $this->url])
+			])
 		?>
 
-		<div class="dropdown">
-			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-			<?
+		
+		<div class='input-group'>
+			<span class='filter-label'>Производитель:</span>
+			<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+		 	<?
 			if(isset($_GET['vendor'])){
 				$vendor = Vendor::findOne($_GET['vendor']);
 				echo $vendor->title;
 			}else{
-				echo "Производитель";
+				echo "Любой";
 			}
 			?>
-			<span class="caret"></span>
-			</button>
-			<?php
-				        echo Dropdown::widget([
-				            'items' => $items
-				        ]);
-				    ?>
+			<b class="caret"></b>
+			</a>
+		    <?php
+		        echo Dropdown::widget([
+		            'items' => $items
+		        ]);
+		    ?>
 		</div>
-		
 		<?
 	}
 
