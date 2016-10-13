@@ -144,7 +144,7 @@ class SiteController extends Controller
     }
 
     public function actionCartcount(){
-        return count($this->getCart());
+        return $this->getCart() ? count($this->getCart()) : '';
     }
 
     /**
@@ -226,12 +226,18 @@ class SiteController extends Controller
     }
 
     public function actionCart(){
-        $cart = array_keys($this->getCart());
-        $model = Product::find()->andWhere(['id' => $cart])->all();
-        return $this->render('cart',[
+        if($this->getCart()){
+            $cart = array_keys($this->getCart());
+            $model = Product::find()->andWhere(['id' => $cart])->all();
+            $render = $this->render('cart',[
                 'model' => $model,
                 'cart' => $cart,
             ]);
+        }else{
+            $render = $this->render('cart_empty');
+        }
+
+        return $render;
     }
    
 
