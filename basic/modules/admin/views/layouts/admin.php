@@ -40,6 +40,7 @@ AppAsset::register($this);
             ['label' => 'Категории', 'url' => ['/admin/category/index']],
             ['label' => 'Производители', 'url' => ['/admin/vendor/index']],
             ['label' => 'Товары', 'url' => ['/admin/product/index']],
+            ['label' => 'Заказы', 'url' => ['/admin/order/index']],
             
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]

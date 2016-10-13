@@ -3,7 +3,7 @@
 namespace app\modules\admin\models;
 
 use Yii;
-
+use app\modules\admin\models\Vendor;
 /**
  * This is the model class for table "OrderProduct".
  *
@@ -24,6 +24,9 @@ use Yii;
  */
 class OrderProduct extends \yii\db\ActiveRecord
 {
+    public function getVendor(){
+        return $this->hasOne(Vendor::className(),['id' => 'vendor_id']);
+    }
     /**
      * @inheritdoc
      */

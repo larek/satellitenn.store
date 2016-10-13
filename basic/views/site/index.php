@@ -66,11 +66,15 @@ $this->registerJsFile('https://maps.googleapis.com/maps/api/js?key=AIzaSyCIf2g1P
                 <div class="title-divider"></div>
             </div>
         </div>
+        <br>
         <div class="row">
-		<?= ListView::widget([
-			'dataProvider' => $dataProvider,
-			'itemView' => '_itemCategory'
-		]);?>
+        <div class="col-md-12">
+      		<?= ListView::widget([
+      			'dataProvider' => $dataProvider,
+      			'itemView' => '_itemCategory',
+            'summary' => false
+      		]);?>
+        </div>
 		</div>
         
         

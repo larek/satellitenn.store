@@ -36,8 +36,8 @@ $(document).ready(function() {
 			}
 			var userDataJson = JSON.stringify(userData);
 			$.post('/site/addorder',{'userData' : userDataJson}).done(function(data){
-				if(data == 'true'){
-					window.location = window.location;
+				if(data !== 'false'){
+					window.location = data;
 				}else{
 					alert('Ошибка при оформлении заказа');
 				}

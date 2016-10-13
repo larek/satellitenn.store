@@ -3,6 +3,8 @@
 namespace app\modules\admin\models;
 
 use Yii;
+use app\modules\admin\models\OrderProduct;
+use yii\data\ActiveDataProvider;
 
 /**
  * This is the model class for table "Order".
@@ -17,6 +19,15 @@ use Yii;
  */
 class Order extends \yii\db\ActiveRecord
 {
+
+    public function getProductsDataProvider($id){
+        return $dataProvider = new ActiveDataProvider([
+                'query' => OrderProduct::find()->where(['order_id' => $id])
+            ]);
+    }
+    public function getProducts(){
+        return $this->hasMany(OrderProduct::className(),['order_id' => 'id']);
+    }
     /**
      * @inheritdoc
      */
@@ -42,10 +53,10 @@ class Order extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'contact' => 'Contact',
-            'date' => 'Date',
+            'id' => 'Номер заказа',
+            'name' => 'Имя',
+            'contact' => 'Контакты',
+            'date' => 'Дата',
             'secret_key' => 'Secret Key',
             'city' => 'City',
             'ip' => 'Ip',

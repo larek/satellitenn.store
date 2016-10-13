@@ -242,6 +242,17 @@ class SiteController extends Controller
 
         return $render;
     }
+
+    public function actionOrder($id){
+        $model = Order::find()->where(['secret_key' => $id])->one();
+        if(!isset($model->id)){
+            $this->redirect(['site/cart']);
+        }else{
+           return $this->render('order',[
+                'model' => $model
+            ]);
+        }
+    }
     
     public function actionAddorder(){
         if($this->getCart()):
@@ -288,7 +299,7 @@ class SiteController extends Controller
                 echo "false";
              }else{
                 $this->clearCart();
-                echo "true";
+                echo Url::to(['site/order','id' => $order->secret_key]);
              }
         endif;
     }
