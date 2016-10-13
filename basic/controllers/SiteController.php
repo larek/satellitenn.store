@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
 use yii\data\ActiveDataProvider;
+use app\models\LoginForm;
 use app\modules\admin\models\Product;
 use app\modules\admin\models\Category;
 use app\modules\admin\models\Thule;
