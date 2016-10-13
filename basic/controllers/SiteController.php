@@ -173,8 +173,8 @@ class SiteController extends Controller
         }
         if(isset($_GET['price'])){
             $price = explode(':',$_GET['price']);
-            $query->andWhere('price > '.$price[0]);
-            $query->andWhere('price < '.$price[1]);
+            $query->andWhere('price >= '.$price[0]);
+            $query->andWhere('price <= '.$price[1]);
         }
         $dataProvider = new ActiveDataProvider([
                 'query' => $query,
