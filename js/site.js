@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 	$(".btn-add").click(function(){
 		var btn = $(this);
 		var id = $(this).attr('id');

@@ -7,6 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Url;
 use yii\data\ActiveDataProvider;
 use app\modules\admin\models\Product;
 use app\modules\admin\models\Category;
@@ -170,6 +171,11 @@ class SiteController extends Controller
         if(isset($_GET['vendor'])){
             $query->andWhere(['vendor_id' => $_GET['vendor']]);
         }
+        if(isset($_GET['price'])){
+            $price = explode(':',$_GET['price']);
+            $query->andWhere('price > '.$price[0]);
+            $query->andWhere('price < '.$price[1]);
+        }
         $dataProvider = new ActiveDataProvider([
                 'query' => $query,
                 'pagination' => [
@@ -183,6 +189,13 @@ class SiteController extends Controller
                 'url' => $id,
                 'dataProvider' => $dataProvider
             ]);
+    }
+
+    public function actionCreateurl(){
+        $data = json_decode($_POST['data']);
+        echo $data->vendor == '' ?
+         Url::to(['site/category', 'id' => $data->url, 'price' => $data->price[0].":".$data->price[1]]) :
+         Url::to(['site/category', 'id' => $data->url, 'vendor' => $data->vendor, 'price' => $data->price[0].":".$data->price[1]]);
     }
 
     public function actionSearch($id){
