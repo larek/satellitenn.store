@@ -14,6 +14,8 @@ use app\modules\admin\models\Product;
 use app\modules\admin\models\Category;
 use app\modules\admin\models\Thule;
 use app\modules\admin\models\Atlant;
+use app\modules\admin\models\Order;
+use app\modules\admin\models\OrderProduct;
 
 
 class SiteController extends Controller
@@ -240,7 +242,56 @@ class SiteController extends Controller
 
         return $render;
     }
-   
+    
+    public function actionAddorder(){
+        if($this->getCart()):
+            $error = []; 
+            $userData = json_decode($_POST['userData']);
+
+            //Add new Order
+            $order = new Order;
+            $order->name = $userData->name;
+            $order->contact = $userData->contact;
+            $order->date = date("Y:m:d H:i:s");
+            $order->secret_key = md5($order->name." ".$order->contact." ".$order->date);
+            $order->save();
+            if(count($order->getErrors()) >0){
+                    $error[] = 1;
+            }
+            
+            //Add product of order;
+            $productsIds = array_keys($this->getCart());
+            $model = Product::find()->where(['id' => $productsIds])->all();
+            foreach($model as $item){
+                $orderProduct = new OrderProduct;
+                $orderProduct->order_id = $order->id;
+                $orderProduct->product_id = $item->id;
+                $orderProduct->category_id = $item->category_id;
+                $orderProduct->vendor_id = $item->vendor_id;
+                $orderProduct->title = $item->title;
+                $orderProduct->skuVendor = $item->skuVendor;
+                $orderProduct->sku = $item->sku;
+                $orderProduct->photo = $item->photo;
+                $orderProduct->description = $item->description;
+                $orderProduct->priceVendor = $item->priceVendor;
+                $orderProduct->price = $item->price;
+                $orderProduct->available = $item->available;
+                $orderProduct->url = $item->url;
+                $orderProduct->save();
+                if(count($orderProduct->getErrors()) > 0){
+                    $error[] = 1;
+                }
+
+            }
+
+             if(count($error) > 0){
+                echo "false";
+             }else{
+                $this->clearCart();
+                echo "true";
+             }
+        endif;
+    }
 
     public function actionSend(){
         $content = $_POST['result'];
@@ -343,6 +394,13 @@ class SiteController extends Controller
         $session->close();
 
         return $product;
+    }
+
+    protected function clearCart(){
+        $session = Yii::$app->session;
+        $session->open();
+        unset($_SESSION['product']);
+        $session->close();
     }
 
     

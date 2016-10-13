@@ -23,6 +23,30 @@ $(document).ready(function() {
 		window.location = "/search/" + query;
 	});
 
+	$(".btn-order").click(function(){
+		requireCount = [];
+		$(".cart-require").each(function(){
+			$(this).val() == "" ? requireCount.push(1) : false;
+		});
+
+		if(requireCount.length == 0){
+			var userData = {
+				'name' : $(".cart-name").val(),
+				'contact' : $(".cart-contact").val()
+			}
+			var userDataJson = JSON.stringify(userData);
+			$.post('/site/addorder',{'userData' : userDataJson}).done(function(data){
+				if(data == 'true'){
+					window.location = window.location;
+				}else{
+					alert('Ошибка при оформлении заказа');
+				}
+			});
+		}else{
+			alert('Чтобы оформить заказ, необходимо указать имя и контактные данные');
+		}
+	});
+
 	$(".search-input").keyup(function(e){
 		var query = $(this).val();
 		if(e.keyCode == 13){
