@@ -13,10 +13,43 @@ use app\modules\admin\models\Vendor;
 
 class Filters extends Widget{
 	public $url;
+	public $dataProvider;
 
 	public function run(){
 		$CurrentCategory = Category::find()->where(['url' => $this->url])->one();
 		$Category = Category::find()->all();
+		$CategoryItems = ArrayHelper::toArray($Category, [
+				'app\modules\admin\models\Category' => [
+					'label' => 'title',
+					'url' => function($data){
+						return Url::to(['site/category','id' => $data->url]);
+					}
+					
+				]
+			]);
+		?>
+		<div class='filter-input-group input-group'>
+			<span class='filter-label'>Категория:</span><br>
+			
+		 	<?
+			if(isset($_GET['id'])){
+				echo Html::a($CurrentCategory->title." ".Html::tag('b','',['class' => 'caret']),'#',['data-toggle' => 'dropdown', 'class' => 'dropdown-toggle category', 'data-url' => $_GET['id']]);
+			}else{
+				echo Html::a('Любая '.Html::tag('b','',['class' => 'caret']),'#',['data-toggle' => 'dropdown', 'class' => 'dropdown-toggle category', 'data-url' => '']);
+			}
+			?>
+			
+		    <?php
+		        echo Dropdown::widget([
+		            'items' => $CategoryItems
+		        ]);
+		    ?>
+		</div>
+
+		<?
+		if($this->dataProvider->getCount()>0):
+
+		
 		$product  = Product::find()->where(['category_id' => $CurrentCategory->id])->all();
 		$vendorIds = [];
 		$productPrices = [];
@@ -42,36 +75,7 @@ class Filters extends Widget{
 				'label' => 'Любой',
 				'url' => Url::to(['site/category','id' => $this->url])
 			]);
-
-		$CategoryItems = ArrayHelper::toArray($Category, [
-				'app\modules\admin\models\Category' => [
-					'label' => 'title',
-					'url' => function($data){
-						return Url::to(['site/category','id' => $data->url]);
-					}
-					
-				]
-			]);
 		?>
-
-		<div class='filter-input-group input-group'>
-			<span class='filter-label'>Категория:</span><br>
-			
-		 	<?
-			if(isset($_GET['id'])){
-				echo Html::a($CurrentCategory->title." ".Html::tag('b','',['class' => 'caret']),'#',['data-toggle' => 'dropdown', 'class' => 'dropdown-toggle category', 'data-url' => $_GET['id']]);
-			}else{
-				echo Html::a('Любая '.Html::tag('b','',['class' => 'caret']),'#',['data-toggle' => 'dropdown', 'class' => 'dropdown-toggle category', 'data-url' => '']);
-			}
-			?>
-			
-		    <?php
-		        echo Dropdown::widget([
-		            'items' => $CategoryItems
-		        ]);
-		    ?>
-		</div>
-
 		
 		<div class='filter-input-group input-group'>
 			<span class='filter-label'>Производитель:</span><br>
@@ -106,6 +110,7 @@ class Filters extends Widget{
 			<span class='price-range-label'><i class='fa fa-rub'></i> <?= max($productPrices)?></span>
 		</div>
 		<?
+		endif;
 	}
 
 

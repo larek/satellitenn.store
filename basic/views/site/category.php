@@ -22,13 +22,13 @@ $this->registerCssFile('/bower_components/seiyria-bootstrap-slider/dist/css/boot
 			]) ?>
 
                     
-			
+			 
                     <div class="table-header ">
                         <div class="row ">
                         <?= Filters::widget([
-                        	'url' => $url
+                        	'url' => $url,
+                            'dataProvider' => $dataProvider
                         ]);?>
-                            
                         </div>
                     </div>
 

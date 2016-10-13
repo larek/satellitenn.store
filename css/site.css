@@ -553,3 +553,7 @@ span.cross-line-2 {
     background-image: linear-gradient(to bottom,#337ab7,#337ab7 100%);
     
 }
+
+.slider.slider-horizontal {
+    margin: 0px 10px;
+}
