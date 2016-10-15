@@ -124,7 +124,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
             </li>
             <!-- facebook -->
             <li id="header_0_ctl00_facebookLink" class="social-media-link">
-                <a href="vk.com" target="_blank">
+                <a href="http://vk.com" target="_blank">
                     <img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/128/vk.com.png" style='height:20px'>
                 </a>
             </li>
