@@ -238,7 +238,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
     <div class="navbar-header">
         <a class="navbar-brand" href="/">
             <h1>
-            <img id="header_0__ctrl_0_imgLogo" src="/images/logo.png" alt="Thule Россия">
+            <img id="header_0__ctrl_0_imgLogo" src="/images/logo2.png" alt="Thule Россия">
             </h1>
         </a>
 
