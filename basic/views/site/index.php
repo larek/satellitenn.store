@@ -9,10 +9,86 @@ $this->registerJsFile('https://maps.googleapis.com/maps/api/js?key=AIzaSyCIf2g1P
 
 
 
-<div class="row">
-    <div class="col-md-12">
-            <!-- <div class="main_background_block hide"></div> -->
+<div id="BackgroundImageCarousel" class="carousel carousel-header slide" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+       
 
+        <div class="carousel-inner">
+            
+                    <div id="header_0_rptrImageSlider_divItem_0" class="item">
+                        <img id="header_0_rptrImageSlider_imgImage_0" src="https://cdn1.static-tgdp.com/~/media/images/thule/slider-images/980x563_thule_ls_awk_urban_glide_jogging_harbour.jpg">
+                        <div id="header_0_rptrImageSlider_divBlock_0" class="block left" style="bottom: 35%; left: 20px; width: 370px;">
+                            <h2 id="header_0_rptrImageSlider_headerText_0" class="headline headline-overlay startpage-headline1 headline-dark" style="color:#262626;text-shadow:0 0 3px rgba(255,255,255,0.8);">
+                                Откройте для себя беговые коляски Thule
+                            </h2>
+                            <h3 id="header_0_rptrImageSlider_headerText2_0" class="headline headline-overlay startpage-headline3 headline-dark" style="color:#262626;text-shadow:0 0 3px rgba(255,255,255,0.8);">
+                                Легкая и компактная
+                            </h3>
+                            <a href="/ru-ru/ru/strollers/jogging-strollers" style="background-color: #78abcf;border: 1px solid #73a4c7;text-shadow: 0px 1px 1px #3b6f94;-webkit-box-shadow: inset 0px -1px 0px #6c9aba;-moz-box-shadow: inset 0px -1px 0px #6c9aba;box-shadow: inset 0px -1px 0px #6c9aba;background-image: none;" class="btn btn-primary btn-overlay tag-manager-homepage-button">
+                                Посмотреть беговые коляски
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div id="header_0_rptrImageSlider_divItem_1" class="item">
+                        <img id="header_0_rptrImageSlider_imgImage_1" src="https://cdn1.static-tgdp.com/~/media/images/thule/slider-images/atmosx4_slider1.jpg">
+                        <div id="header_0_rptrImageSlider_divBlock_1" class="block right" style="bottom: 18%; right: 40px; width: 370px;">
+                            <h2 id="header_0_rptrImageSlider_headerText_1" class="headline headline-overlay startpage-headline1 headline-dark" style="color:#FFFFFF;">
+                                Thule Atmos X4
+                            </h2>
+                            <h3 id="header_0_rptrImageSlider_headerText2_1" class="headline headline-overlay startpage-headline3 headline-dark" style="color:#FFFFFF;">
+                                
+                            </h3>
+                            <a href="/ru-ru/ru/computer-phone-cases/iphone-cases/thule-atmos-x4-iphone-case-_-family_503764" style="background-color: #78abcf;border: 1px solid #73a4c7;text-shadow: 0px 1px 1px #3b6f94;-webkit-box-shadow: inset 0px -1px 0px #6c9aba;-moz-box-shadow: inset 0px -1px 0px #6c9aba;box-shadow: inset 0px -1px 0px #6c9aba;background-image: none;" class="btn btn-primary btn-overlay tag-manager-homepage-button">
+                                Подробная информация
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div id="header_0_rptrImageSlider_divItem_2" class="item active">
+                        <img id="header_0_rptrImageSlider_imgImage_2" src="https://cdn1.static-tgdp.com/~/media/images/thule/slider-images/thule_sliders_new_chasm.jpg">
+                        <div id="header_0_rptrImageSlider_divBlock_2" class="block left" style="bottom: 18%; left: 40px; width: 370px;">
+                            <h2 id="header_0_rptrImageSlider_headerText_2" class="headline headline-overlay startpage-headline1 headline-dark" style="color:#262626;text-shadow:0 0 3px rgba(255,255,255,0.8);">
+                                Thule Chasm
+                            </h2>
+                            <h3 id="header_0_rptrImageSlider_headerText2_2" class="headline headline-overlay startpage-headline3 headline-dark" style="color:#262626;text-shadow:0 0 3px rgba(255,255,255,0.8);">
+                                
+                            </h3>
+                            <a href="/ru-ru/ru/luggage/travel-duffel-bags/thule-chasm-40l-_-221101" style="background-color: #78abcf;border: 1px solid #73a4c7;text-shadow: 0px 1px 1px #3b6f94;-webkit-box-shadow: inset 0px -1px 0px #6c9aba;-moz-box-shadow: inset 0px -1px 0px #6c9aba;box-shadow: inset 0px -1px 0px #6c9aba;background-image: none;" class="btn btn-primary btn-overlay tag-manager-homepage-button">
+                                Подробная информация
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div id="header_0_rptrImageSlider_divItem_3" class="item">
+                        <img id="header_0_rptrImageSlider_imgImage_3" src="https://cdn1.static-tgdp.com/~/media/images/thule/slider-images/wingbar_edge_silver_slider.jpg">
+                        <div id="header_0_rptrImageSlider_divBlock_3" class="block left" style="bottom: 40%; left: 40px; width: 370px;">
+                            <h2 id="header_0_rptrImageSlider_headerText_3" class="headline headline-overlay startpage-headline1 headline-dark" style="color:#FFFFFF;">
+                                Thule WingBar Edge
+                            </h2>
+                            <h3 id="header_0_rptrImageSlider_headerText2_3" class="headline headline-overlay startpage-headline3 headline-dark" style="color:#FFFFFF;">
+                                
+                            </h3>
+                            <a href="/ru-ru/ru/roof-rack/car-racks/thule-wingbar-edge-9591-_-959100" style="background-color: #78abcf;border: 1px solid #73a4c7;text-shadow: 0px 1px 1px #3b6f94;-webkit-box-shadow: inset 0px -1px 0px #6c9aba;-moz-box-shadow: inset 0px -1px 0px #6c9aba;box-shadow: inset 0px -1px 0px #6c9aba;background-image: none;" class="btn btn-primary btn-overlay tag-manager-homepage-button">
+                                Подробная информация
+                            </a>
+                        </div>
+                    </div>
+                
+        </div>
+         
+                <ol class="carousel-indicators">
+            
+                <li data-target="#BackgroundImageCarousel" data-slide-to="0" class=""></li>
+            
+                <li data-target="#BackgroundImageCarousel" data-slide-to="1" class=""></li>
+            
+                <li data-target="#BackgroundImageCarousel" data-slide-to="2" class="active"></li>
+            
+                <li data-target="#BackgroundImageCarousel" data-slide-to="3" class=""></li>
+            
+                </ol>
+            
+    </div>
         <div class="content">
 
         <div class="row main_banner_wrapper hide">
@@ -24,42 +100,7 @@ $this->registerJsFile('https://maps.googleapis.com/maps/api/js?key=AIzaSyCIf2g1P
 
         </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Багажные системы</h1>  
-                <p style='text-align:justify;'>Очень часто наши клиенты обращаются к нам с просьбой оказать помощь в выборе багажной системы, слышим от них много различных историй о недобросовестных продавцах, которые устанавливают на автомобили багажники, порой совершенно не подходящие для их автомобиля. Такая установка может повредить лакокрасочное покрытие автомобиля или даже оставить вмятины на металле. И главное: велика вероятность отрыва такой багажной системы при движении автомобиля, что создает непосредственную угрозу жизни и здоровью участников дорожного движения. Проведя определенный анализ рынка багажников, мы решили наладить продажу качественных систем известных производителей, отлично зарекомендовавших себя в данной сфере.
 
- 				</p>
- 				<p style='text-align:justify;'>
- 					К решению данной задачи мы подошли со всей ответственностью, поэтому Вы не найдете в наших предложениях изделий, которые крепятся по принципу «а, и так сойдет…». На многие популярные модели автомобилей багажные системы есть в наличии на нашем складе. Зачастую, на довольно редкие автомобили, не удается быстро подобрать багажник. Если мы не сможем предложить Вам багажник сразу, то доставим его в течение 1-2 дней, что зачастую не под силу даже официальным представителям и различным дилерам, потому как они крайне инертны и не отличаются высокой мобильностью.
- 				</p>  
-            </div>
-            <div class="col-md-6 hide">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">Обратная связь</h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="form-group">
-                        <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputEmail3" placeholder="Ваше имя">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-sm-10">
-                          <input type="password" class="form-control" id="inputPassword3" placeholder="Ваш телефон или email">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                          <button type="submit" class="btn btn-default">Sign in</button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-            </div>
-
-        </div>
         <div class="row">
             <div class="col-md-12">
                 <h2>Группы товаров</h2>
@@ -83,51 +124,6 @@ $this->registerJsFile('https://maps.googleapis.com/maps/api/js?key=AIzaSyCIf2g1P
             
               
         </div>
-    </div>
-</div>
+
     
-    <div id="map"></div>
-    <script>
-
-
-            var map;
-            var myLatLng = {lat: 56.2912629, lng: 44.066847}
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: myLatLng,
-        zoom: 12,
-        scrollwheel: false
-      });
-
-        var contentString = '<div id="content">'+
-              '<div id="siteNotice">'+
-              '</div>'+
-              '<h4 id="firstHeading" class="firstHeading">Satellite</h4>'+
-              '<div id="bodyContent">'+
-              '<p><i class="fa fa-map-marker"></i> г. Нижний Новгород, ул. Касьянова, д. 6 "В"</p>' +
-              '<p><i class="fa fa-envelope-o"></i> satellitenn@yandex.ru</p>' +
-              '<p><i class="fa fa-phone"></i> +7 910 385 21 44</p>' +
-              '</div>'+
-              '</div>';
-
-          var infowindow = new google.maps.InfoWindow({
-            content: contentString
-          });
-
-        var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'Hello World!'
-          });
-
-        marker.addListener('click', function() {
-            infowindow.open(map, marker);
-          });
-
-
-
-  
-
-
-    }
-    </script>
+    

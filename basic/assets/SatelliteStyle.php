@@ -13,14 +13,17 @@ use yii\web\AssetBundle;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class AppAsset extends AssetBundle
+class SatelliteStyle extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        'css/sat_style.css',
+        'css/site.css?v=2.0',
         'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300',
-        '/bower_components/font-awesome/css/font-awesome.min.css',
+        '/bower_components/font-awesome/css/font-awesome.min.css'
+
+
     ];
     public $js = [
         'js/site.js'

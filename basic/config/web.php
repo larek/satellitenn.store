@@ -7,6 +7,7 @@ $config = [
     'language' => 'ru',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'layout' => 'satellite',
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',

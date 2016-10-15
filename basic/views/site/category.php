@@ -14,8 +14,8 @@ $this->registerCssFile('/bower_components/seiyria-bootstrap-slider/dist/css/boot
 
     <div class="row">
 
-        <div class="col-md-12">
-            <div class="content">
+        <div class="">
+            <div class="content content-margin">
                 <h1><?= $this->title?></h1>
                 <?= Breadcrumbs::widget([
 			'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

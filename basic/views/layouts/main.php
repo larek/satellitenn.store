@@ -6,9 +6,9 @@
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 use yii\widgets\Menu;
-use app\assets\AppAsset;
+use app\assets\SatelliteStyle;
 
-AppAsset::register($this);
+SatelliteStyle::register($this);
 $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
 
 ?>

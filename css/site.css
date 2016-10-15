@@ -1,6 +1,5 @@
 html,
 body {
-    padding-top: 30px;
     background: #f5f8fa;
     font-family: 'Open Sans';
 }
@@ -432,19 +431,19 @@ span.cross-line-2 {
 
 @media (min-width: 768px){
     .table-header {
-        width: 718px;
+        width: 763px;
     }
 }
 
 @media (min-width: 992px){
     .table-header {
-        width: 938px;
+        width: 993px;
     }
 }
 
 @media (min-width: 1200px){
     .table-header {
-        width: 1138px;
+        width: 993px;
     }
 }
 
@@ -556,4 +555,22 @@ span.cross-line-2 {
 
 .slider.slider-horizontal {
     margin: 0px 10px;
+}
+
+.content.content-margin {
+    padding-top: 120px;
+}
+
+.link-header {
+    position: relative;
+    width: 800px;
+    padding: 20px;
+        -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+}
+
+.link-header a {
+    color: black;
+    font-size: 13px;
 }
