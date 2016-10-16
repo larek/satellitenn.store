@@ -563,9 +563,9 @@ span.cross-line-2 {
 
 .link-header {
     position: relative;
-    width: 800px;
-    padding: 20px;
-        -moz-column-count: 3;
+    width: 980px;
+    padding: 20px 40px;
+    -moz-column-count: 3;
     -webkit-column-count: 3;
     column-count: 3;
 }
@@ -573,4 +573,8 @@ span.cross-line-2 {
 .link-header a {
     color: black;
     font-size: 13px;
+}
+
+.navbar-logo > img{
+    width:100px;
 }

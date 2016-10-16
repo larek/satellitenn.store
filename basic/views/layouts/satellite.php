@@ -26,20 +26,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
 <body>
     <?php $this->beginBody() ?>
     
-<noscript>
-    &lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-W3GPCJ"
-        height="0" width="0" style="display: none; visibility: hidden"&gt;&lt;/iframe&gt;
-</noscript>
-<script>
 
-    (function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push(
-    { 'gtm.start': new Date().getTime(), event: 'gtm.js' }
-); var f = d.getElementsByTagName(s)[0],
-    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-W3GPCJ');
-</script>
 
     <form method="post" action="./ru" id="mainform">
 
@@ -148,7 +135,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
                         
                 
                     <li>
-                        <?= Html::a('Главная',['site/index']);?>
+                        <?= Html::a(Html::img('/images/logo2.png'),['site/index'],['class' => 'navbar-logo']);?>
                     </li>
                 
                     <li class='cartMenuItem'>
@@ -236,11 +223,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
 <div class="navbar navbar-main nocollapse-desktop">
 
     <div class="navbar-header">
-        <a class="navbar-brand" href="/">
-            <h1>
-            <img id="header_0__ctrl_0_imgLogo" src="/images/logo2.png" alt="Thule Россия">
-            </h1>
-        </a>
+       
 
         <div class="nav-container" id="accordion1">
             

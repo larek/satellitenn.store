@@ -6226,8 +6226,8 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 .navbar {
     position: relative;
     min-height: 50px;
-    margin-bottom: 20px;
-    border: 1px solid transparent
+    margin-bottom: 0px;
+    border: 1px solid transparent;
 }
 
 @media(min-width:768px) {
@@ -12019,7 +12019,7 @@ body.modal-open {
     top: -9px;
     font-size: 35px;
     font-weight: 700;
-    content: "“";
+    content: "â€œ";
     color: #9a9a9a
 }
 
@@ -13138,7 +13138,7 @@ a:focus .campaign-spot-bg {
 .navbar-top .navbar-header {
     border-radius: 0;
     border: 0;
-    background: #121212
+    background: #2a2928;
 }
 
 @media(min-width:768px) {
@@ -13287,7 +13287,6 @@ position: absolute;
 
 .navbar-main .nav-container {
     height: 100%;
-    margin-left: 160px
 }
 
 .navbar-main .nav-grid {
