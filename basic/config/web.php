@@ -76,7 +76,8 @@ $config = [
                 'catalog' => 'site/catalog',
                 'product/<id>' => 'site/product',
                 'admin/product/search/<id>' => 'admin/product/index',
-                'admin/content/<id>' => 'admin/content/update'
+                'admin/content/<id>' => 'admin/content/update',
+                'admin/cart-setting/<id>' => 'admin/cart-setting/update',
             ],
         ],
         

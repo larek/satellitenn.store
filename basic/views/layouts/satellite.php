@@ -289,23 +289,23 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
             <ul class="list-inline centered">
             
              <li>
-            <?= Html::a('Варианты<br>оплаты',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
+            <?= Html::a('Оплаты',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
             </li>
 
              <li>
-            <?= Html::a('Способ<br>доставки',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
+            <?= Html::a('Доставки',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
             </li>
 
             <li>
-            <?= Html::a('Каталог<br>товаров',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
+            <?= Html::a('Каталог',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
             </li>
 
             <li>
-            <?= Html::a('Наши<br>контакты',['site/contacts'],['class' => 'btn btn-secondary-footer'])?>
+            <?= Html::a('Контакты',['site/contacts'],['class' => 'btn btn-secondary-footer'])?>
             </li>
 
              <li>
-            <?= Html::a('Прокат<br>оборудования','http://rentbox.satellitenn.ru',['class' => 'btn btn-secondary-footer'])?>
+            <?= Html::a('Прокат','http://rentbox.satellitenn.ru',['class' => 'btn btn-secondary-footer'])?>
             </li>
         
             
