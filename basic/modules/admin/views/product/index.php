@@ -1,7 +1,10 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
 use yii\grid\GridView;
+use app\modules\admin\models\Vendor;
+use app\modules\admin\models\Category;
 
 /**
  * @var yii\web\View $this
@@ -24,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        //'filterModel' => $searchModel,
+        'filterModel' => $searchModel,
         'columns' => [
            // ['class' => 'yii\grid\SerialColumn'],
 
@@ -36,14 +39,18 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => function($data){
                     return $data->category_id == 0 ? 'Без категории' : $data->category->title;
                      
-                }
+                },
+                'filter' => Html::activeDropDownList($searchModel, 'category_id', ArrayHelper::map(Category::find()->asArray()->all(), 'id', 'title'),['class'=>'form-control','prompt' => 'Категория']),
+
             ],
             [
                 'attribute' => 'vendor_id',
                 'format' => 'raw',
                 'value' => function($data){
                     return $data->vendor_id == 0 ? 'Производитель не выбран' : $data->vendor->title;
-                }
+                },
+                'filter' => Html::activeDropDownList($searchModel, 'vendor_id', ArrayHelper::map(Vendor::find()->asArray()->all(), 'id', 'title'),['class'=>'form-control','prompt' => 'Производитель']),
+
             ],
             'skuVendor',
             // 'sku',
