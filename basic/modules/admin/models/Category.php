@@ -8,6 +8,9 @@ use Yii;
  * This is the model class for table "category".
  *
  * @property integer $id
+ * @property integer $order_id
+ * @property integer $active
+ * @property integer $header
  * @property string $title
  * @property string $image
  */
@@ -28,7 +31,8 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             [['title'], 'required'],
-            [['title', 'image'], 'string', 'max' => 250]
+            [['order_id', 'active', 'header'], 'integer'],
+            [['title', 'image', 'url'], 'string', 'max' => 250]
         ];
     }
 
@@ -39,6 +43,9 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'active' => 'Категория активна',
+            'order_id' => 'Порядковый номер категории',
+            'header' => 'Категория отображается в шапке',
             'title' => 'Название',
             'image' => 'Изображение',
         ];

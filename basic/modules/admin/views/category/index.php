@@ -27,12 +27,19 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             //['class' => 'yii\grid\SerialColumn'],
-
+            // 'order_id',
+            [
+                'attribute' => 'title',
+                'format' => 'raw',
+                'value' => function($data){
+                    return Html::a($data->title,['category/update', 'id' => $data->id])." #".$data->order_id;
+                }
+            ]
             //'id',
-            'title',
+            // 'title',
             //'image',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            //['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 

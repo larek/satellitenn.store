@@ -10850,7 +10850,7 @@ hr {
 #footer .footer-top {
     margin-top: 30px;
     height: 43px;
-    background: url(/ui/trede/img/footer-bg.png) no-repeat center bottom;
+    /*background: url(/ui/trede/img/footer-bg.png) no-repeat center bottom;*/
     position: relative;
     top: 11px;
     z-index: 100;

@@ -168,7 +168,7 @@ class CategoryController extends Controller
             $modelUrl = Category::findOne($model->id);
             $modelUrl->url = Yii::$app->str2url->parse($model->title." ".$model->id);
             $modelUrl->save();
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,

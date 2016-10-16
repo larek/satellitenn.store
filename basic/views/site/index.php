@@ -3,7 +3,7 @@ use yii\widgets\ListView;
 /* @var $this yii\web\View */
 
 $this->title = 'Satellitenn Store';
-$this->registerJsFile('https://maps.googleapis.com/maps/api/js?key=AIzaSyCIf2g1PGQQN0J1aiuf-Z3Lj8DCE5qf2uc&callback=initMap');
+
 
 ?>
 

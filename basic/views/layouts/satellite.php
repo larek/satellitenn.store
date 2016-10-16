@@ -93,21 +93,21 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
                         <?= Html::a('Контакты',['site/contacts'])?>
                     </li>
 
-                    <li class='cartMenuItem'>
-                        <?= Html::a('Корзина',['site/cart'], ['class' => 'cartMenuItem'])?>
-                    </li>
+                    
                 
                     </ul>
                 
 
-            <div id="header_0_ctl01_panSearchButton" class="navbar-form navbar-right" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'searchButton')">
-    
+            <div id="" class="navbar-form navbar-right" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'searchButton')">
+                <div class='cartMenuItem'>
+                        <?= Html::a('<i class="fa fa-shopping-cart"></i>',['site/cart'], ['class' => 'cartMenuItem'])?>
+                    </div>
                 <div class="form-group">
                     <input name="" type="text" maxlength="1024" id="" class="search-input" value='<? if(isset($this->params['search-query'][0])){ echo $this->params['search-query'][0];}?>'>
                 </div>
                 <input type="submit" name="header_0$ctl01$searchButton" value="Поиск" id="searchButton" class="btn btn-search">
             
-</div>
+            </div>
 
         </div>
         </div>
@@ -213,7 +213,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
                     
                         <div class='link-header'>
                                     <?
-                                    $model = Category::find()->all();
+                                    $model = Category::find()->where(['header'=>1])->andWhere(['active' => 1])->orderBy(['order_id' => SORT_ASC])->all();
                                     foreach($model as $item){
                                         
                                         echo Html::a($item->title,['site/category','id' => $item->url]);
@@ -287,17 +287,25 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
 
     
             <ul class="list-inline centered">
-        
-            <li>
-            <?= Html::a('Каталог подбора',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
-            </li>
-
-            <li>
-            <?= Html::a('Контакты',['site/contacts'],['class' => 'btn btn-secondary-footer'])?>
+            
+             <li>
+            <?= Html::a('Варианты<br>оплаты',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
             </li>
 
              <li>
-            <?= Html::a('Прокат оборудования','http://rentbox.satellitenn.ru',['class' => 'btn btn-secondary-footer'])?>
+            <?= Html::a('Способ<br>доставки',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
+            </li>
+
+            <li>
+            <?= Html::a('Каталог<br>товаров',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
+            </li>
+
+            <li>
+            <?= Html::a('Наши<br>контакты',['site/contacts'],['class' => 'btn btn-secondary-footer'])?>
+            </li>
+
+             <li>
+            <?= Html::a('Прокат<br>оборудования','http://rentbox.satellitenn.ru',['class' => 'btn btn-secondary-footer'])?>
             </li>
         
             
