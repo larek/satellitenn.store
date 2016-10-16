@@ -168,6 +168,23 @@ class SiteController extends Controller
             ]);
     }
 
+    public function actionContacts(){
+        return $this->render('contact');
+    }
+
+    public function actionCatalog()
+    {
+        $dataProvider = new ActiveDataProvider([
+                'query' => Category::find(),
+                'pagination' => [
+                    'pageSize' => 20
+                ]
+            ]);
+        return $this->render('catalog',[
+                'dataProvider' => $dataProvider
+            ]);
+    }
+
     public function actionCategory($id){
         $model= Category::find()->where(['url' => $id])->one();
         $query = Product::find()->where(['category_id' => $model->id]);

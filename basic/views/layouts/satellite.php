@@ -28,19 +28,12 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
     
 
 
-    <form method="post" action="./ru" id="mainform">
+    <!-- <form method="post" action="./ru" id="mainform"> -->
 
 
-        <div class="container">
-            
-
-            
-
+<div class="container">
 <div id="header-firstpage" class="header-carousel">
-
     <div class="headersection">
-
-        
 
 <div class="row hidden-xs">
     <div class="nav-utility-background col-xs-12">
@@ -56,59 +49,13 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
                     </li>
                 
             
-            <li id="header_0_ctl00_cartListItem" class="utility-dropdown hide">
-                <a id="header_0_ctl00_hypShoppingCart" class="shoppingcart-btn" href="/ru-ru/ru/shopping/shopping-list">Список покупок&nbsp;<span id="header_0_ctl00_cartCounter" class="badge cart-counter hidden">0</span></a>
-                <div class="dropdown shoppingcart"></div>
-                <input type="hidden" name="header_0$ctl00$currentMarket" id="currentMarket" value="{E8F9A9A9-4A8D-4715-A1A3-4216799921D5}">
-                
-
-<div class="pure-html-template">
-    <div class="dropdown shoppingcart" id="cart-template-container">
-        <ul class="product-list-vertical">
-            <li class="product-item item-template">
-                <a href="#">
-                    <div class="col col-image">
-                        <img class="cartimage" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="">
-                    </div>
-                    <div class="col col-info">
-                        <p class="product-item-name"></p>
-                        <p class="product-item-artnumber">
-                            <span class="quantity-template">
-                                <span class="product-item-amount"></span>×<span class="product-item-artno"></span><br>
-                            </span>
-                        </p>
-                        <p class="price">
-                            <span class="product-item-price"></span>
-                            <span class="price-unit"></span>
-                        </p>
-                    </div>
-                </a>
-            </li>
-            <li class="product-list-footer hide">
-                <a id="header_0_ctl00_ctl00_hypShoppingCart" class="btn btn-primary" href="/ru-ru/ru/shopping/shopping-list">Смотреть список покупок</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<script>
-    var shoppingcartErrorLink = "/ru-ru/ru/shopping/shopping-list";
-    var shoppingcartErrorMessage = "Приносим извинения, не удается получить доступ к вашей корзине. Обновите страницу и попробуйте снова или перейдите по этой ссылке на страницу оформления заказа.";
-    var shoppingcartEmptyMessage ="Ваша корзина пуста";
-</script>
-
-            </li>
+           
      
             <li>
                 <a href='tel:+79103852144'>+7 910 385 21 44</a>
                 
             </li>
-            <!-- market selector -->
-            <li class='hide'>
-                <a href="/ru-ru/ru?ls=true" id="header_0_ctl00_aMarket" role="button" data-toggle="modal" data-target="#marketselector" class="brand marketselectorlink" rel="nofollow">
-                    <img id="header_0_ctl00_imgMarketFlag" title="Россия" src="https://cdn1.static-tgdp.com/~/media/images/common/flags/flag_russia.png" alt="Россия" style="height: 16px; width: 16px;">&nbsp;Россия
-                </a>
-            </li>
+            
             <!-- facebook -->
             <li id="header_0_ctl00_facebookLink" class="social-media-link">
                 <a href="http://vk.com" target="_blank">
@@ -137,7 +84,15 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
                     <li>
                         <?= Html::a(Html::img('/images/logo2.png'),['site/index'],['class' => 'navbar-logo']);?>
                     </li>
-                
+
+                    <li>
+                        <?= Html::a('Каталог',['site/catalog'])?>
+                    </li>
+
+                    <li>
+                        <?= Html::a('Контакты',['site/contacts'])?>
+                    </li>
+
                     <li class='cartMenuItem'>
                         <?= Html::a('Корзина',['site/cart'], ['class' => 'cartMenuItem'])?>
                     </li>
@@ -148,7 +103,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
             <div id="header_0_ctl01_panSearchButton" class="navbar-form navbar-right" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'searchButton')">
     
                 <div class="form-group">
-                    <input name="header_0$ctl01$searchQuery" type="text" maxlength="1024" id="searchQuery" class="search-query">
+                    <input name="" type="text" maxlength="1024" id="" class="search-input" value='<? if(isset($this->params['search-query'][0])){ echo $this->params['search-query'][0];}?>'>
                 </div>
                 <input type="submit" name="header_0$ctl01$searchButton" value="Поиск" id="searchButton" class="btn btn-search">
             
@@ -277,6 +232,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
 
     </div>
    <?= $content?>
+
 </div>
 
 
@@ -325,18 +281,26 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
 <section id="Sub106C">
     <header>
         <h5 class="footer-section-headline text-small-grey">
-            Полезные ссылки
+            
         </h5>
     </header>
 
     
             <ul class="list-inline centered">
         
-            <li><a href="" class="btn btn-secondary-footer">Каталог подбора</a></li>
+            <li>
+            <?= Html::a('Каталог подбора',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
+            </li>
+
+            <li>
+            <?= Html::a('Контакты',['site/contacts'],['class' => 'btn btn-secondary-footer'])?>
+            </li>
+
+             <li>
+            <?= Html::a('Прокат оборудования','http://rentbox.satellitenn.ru',['class' => 'btn btn-secondary-footer'])?>
+            </li>
         
-            <li><a href="" class="btn btn-secondary-footer">Найти дилера</a></li>
-        
-            <li><a href="" class="btn btn-secondary-footer">Blogger requests</a></li>
+            
         
         </ul>
         
@@ -375,7 +339,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
 
 
 <!-- Modal -->
-<div id="marketselector" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="marketselectorlabel" aria-hidden="true">
+<!-- <div id="marketselector" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="marketselectorlabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -390,12 +354,12 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
             </div>
         </div>
     </div>
-</div>
+</div> -->
         
-<div id="familymodal" class="modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"></div></div></div>
+<!-- <div id="familymodal" class="modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"></div></div></div> -->
         
 
-    
+ <!--    
 <script type="text/javascript">
 //<![CDATA[
 var theForm = document.forms['mainform'];
@@ -410,9 +374,9 @@ function __doPostBack(eventTarget, eventArgument) {
     }
 }
 //]]>
-</script>
+</script> -->
 
-
+<!-- 
 <script src="/WebResource.axd?d=u1iAAwFrj7BQPmYKT_00Aa8HsNOlBtoUIoJEs_p9r1VY8diGWGsJF_fQWWYjiDOXJ-SuT7oph1BvhnBZRIc6q57DoPc1&amp;t=635875545181218729" type="text/javascript"></script>
 </form>
 
@@ -423,7 +387,7 @@ function __doPostBack(eventTarget, eventArgument) {
 <script> $.noConflict();</script>
 
 <script src="https://cdn1.static-tgdp.com/ui/trede/release/rel-main-FBD3C11B3E0527D21C27E8F556A73D43.js"></script>
-
+ -->
 
 <!--[if lte IE 9]>
     <script src="https://cdn1.static-tgdp.com/ui/trede/release/rel-lte-ie9-603E63BA48D0D29F68E7C185325F117A.js"></script>
@@ -433,12 +397,12 @@ function __doPostBack(eventTarget, eventArgument) {
     <!-- SC6-PRO-THU -->
 
 
-
+<!-- 
 <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","917790871640714");fbq("track","PageView");</script>
 <noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=917790871640714&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript><script type="text/javascript" id="">var ezt=ezt||[];(function(){var a=document.createElement("script");a.src=("https:"==document.location.protocol?"https://secure":"http://pixel")+".quantserve.com/aquant.js?a\x3dp-Aba75g5na8CRd";a.async=!0;a.type="text/javascript";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();ezt.push({qacct:"p-Aba75g5na8CRd",orderid:"",revenue:""});</script>
 <noscript>
   &lt;img src="//pixel.quantserve.com/pixel/p-Aba75g5na8CRd.gif?labels=_fp.event.Default" style="display: none;" border="0" height="1" width="1" alt="Quantcast"&gt;
-</noscript>
+</noscript> -->
         
 
         <?php $this->endBody() ?>

@@ -7,6 +7,7 @@ use yii\widgets\Breadcrumbs;
 
 $this->title = "Поиск: ". $url;
 $this->params['breadcrumbs'][] = $this->title;
+$this->params['search-query'][] = $url;
 ?>
 <div class="row">
     

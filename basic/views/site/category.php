@@ -12,9 +12,7 @@ $this->registerJsFile('/js/price-range.js',['depends' => [\yii\web\JqueryAsset::
 $this->registerCssFile('/bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css');
 ?>
 
-    <div class="row">
-
-        <div class="">
+   
             <div class="content content-margin">
                 <h1><?= $this->title?></h1>
                 <?= Breadcrumbs::widget([
@@ -42,5 +40,4 @@ $this->registerCssFile('/bower_components/seiyria-bootstrap-slider/dist/css/boot
                         </div>
                     </div>
             </div>
-        </div>
-    </div>
+       

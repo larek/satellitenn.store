@@ -431,19 +431,19 @@ span.cross-line-2 {
 
 @media (min-width: 768px){
     .table-header {
-        width: 763px;
+        width: 748px;
     }
 }
 
 @media (min-width: 992px){
     .table-header {
-        width: 993px;
+        width: 978px;
     }
 }
 
 @media (min-width: 1200px){
     .table-header {
-        width: 993px;
+        width: 978px;
     }
 }
 
