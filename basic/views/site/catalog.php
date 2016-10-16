@@ -12,13 +12,13 @@ $this->title = 'Каталог Satellitenn Store';
 
         <br><br>
         <div class="row">
-        <div class="">
+        
       		<?= ListView::widget([
       			'dataProvider' => $dataProvider,
       			'itemView' => '_itemCategory',
                 'summary' => false
       		]);?>
-        </div>
+        
 		</div>
         
         

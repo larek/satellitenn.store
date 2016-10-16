@@ -31,13 +31,13 @@ $this->registerCssFile('/bower_components/seiyria-bootstrap-slider/dist/css/boot
                     </div>
 
                     <div class="row">
-                        <div class="col-md-12">
+                        
                             <?= ListView::widget([
 			'dataProvider' => $dataProvider,
 			'itemView' => '_itemProduct',
 			'viewParams' => ['cart' => $cart]
 		]);?>
-                        </div>
+                        
                     </div>
             </div>
        
