@@ -289,11 +289,11 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
             <ul class="list-inline centered">
             
              <li>
-            <?= Html::a('Оплаты',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
+            <?= Html::a('Оплата',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
             </li>
 
              <li>
-            <?= Html::a('Доставки',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
+            <?= Html::a('Доставка',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
             </li>
 
             <li>

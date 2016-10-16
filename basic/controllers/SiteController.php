@@ -16,6 +16,7 @@ use app\modules\admin\models\Thule;
 use app\modules\admin\models\Atlant;
 use app\modules\admin\models\Order;
 use app\modules\admin\models\OrderProduct;
+use app\modules\admin\models\CartSetting;
 
 
 class SiteController extends Controller
@@ -249,9 +250,11 @@ class SiteController extends Controller
         if($this->getCart()){
             $cart = array_keys($this->getCart());
             $model = Product::find()->andWhere(['id' => $cart])->all();
+            $cartSetting = CartSetting::findOne(1);
             $render = $this->render('cart',[
                 'model' => $model,
                 'cart' => $cart,
+                'cartSetting' => $cartSetting
             ]);
         }else{
             $render = $this->render('cart_empty');

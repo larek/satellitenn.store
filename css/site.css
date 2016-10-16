@@ -493,7 +493,7 @@ span.cross-line-2 {
 .cart_item {
     border-bottom: 1px dashed silver;
     padding: 15px 0px;
-    border-right: 1px solid silver;
+    border-left: 1px solid silver;
 }
 
 .list-block{
