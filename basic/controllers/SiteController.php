@@ -176,7 +176,7 @@ class SiteController extends Controller
     public function actionCatalog()
     {
         $dataProvider = new ActiveDataProvider([
-                'query' => Category::find(),
+                'query' => Category::find()->orderBy(['order_id' => SORT_ASC]),
                 'pagination' => [
                     'pageSize' => 20
                 ]
