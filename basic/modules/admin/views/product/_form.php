@@ -22,9 +22,16 @@ use dosamigos\tinymce\TinyMce;
 <div class="row">
     <div class="col-md-4">
         
-        <?= $form->field($model, 'category_id')->dropDownList(ArrayHelper::map(Category::find()->all(),'id','title')) ?>
+        <?
+        $categoryItems = ArrayHelper::map(Category::find()->all(),'id','title');
         
-        <?= $form->field($model, 'vendor_id')->dropDownList(ArrayHelper::map(Vendor::find()->all(),'id','title')) ?>
+        array_unshift($categoryItems, 'Выберите категорию');
+       echo $form->field($model, 'category_id')->dropDownList($categoryItems) ?>
+        
+        <? 
+        $vendorItems = ArrayHelper::map(Vendor::find()->all(),'id','title');
+        array_unshift($vendorItems, 'Выберите производителя');
+        echo $form->field($model, 'vendor_id')->dropDownList($vendorItems); ?>
 
         <?= $form->field($model, 'title')->textInput(['maxlength' => 250]) ?>
 
