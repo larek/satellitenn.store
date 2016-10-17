@@ -65,6 +65,12 @@ $this->params['breadcrumbs'][] = $this->title;
                         
                     </div>
                     <br>
+                    <div class="input-group-cart">
+                        
+                        <textarea rows='3' type="text" class="form-control cart-comment" aria-describedby="sizing-addon3" placeholder='Комментарий к заказу'></textarea>
+                        
+                    </div>
+                    <br>
                     <span class="btn btn-default btn-order">Оформить заказ</span>
                 </div>
 
@@ -79,7 +85,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <div class="col-md-8">
                                 <?= Html::a($item->title,['site/product', 'id' => $item->url])?>
                                 <br>
-                                <span><?= $item->price?></span>
+                                <span><?= number_format($item->price,0," "," ");?> руб.</span>
                             </div>
                             <div class="col-md-2">
                                 <span class='btn btn-default btn-remove' id='<?= $item->id?>'><i class='fa fa-trash'></i></span>
