@@ -74,6 +74,7 @@ $config = [
                 'contacts' => 'site/contacts',
                 'category/<id>' => 'site/category',
                 'catalog' => 'site/catalog',
+                'callback' => 'site/callback',
                 'product/<id>' => 'site/product',
                 'admin/product/search/<id>' => 'admin/product/index',
                 'admin/content/<id>' => 'admin/content/update',

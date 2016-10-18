@@ -52,13 +52,14 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
            
      
             <li>
-                <a href='tel:+79103852144'>+7 910 385 21 44</a>
+
+            <?= Html::a('<i class="fa fa-envelope"></i>',['site/callback'],['class'=>'callback-header-link','title'=>'Обратная связь']);?>
                 
             </li>
             
             <!-- facebook -->
             <li id="header_0_ctl00_facebookLink" class="social-media-link">
-                <a href="http://vk.com" target="_blank">
+                <a href="https://vk.com/satellitenn" target="_blank" title='Вконтакте'>
                     <img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/128/vk.com.png" style='height:20px'>
                 </a>
             </li>

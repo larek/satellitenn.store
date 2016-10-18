@@ -173,6 +173,10 @@ class SiteController extends Controller
         return $this->render('contact');
     }
 
+    public function actionCallback(){
+        return $this->render('callback');
+    }
+
     public function actionCatalog()
     {
         $dataProvider = new ActiveDataProvider([
