@@ -9267,7 +9267,7 @@ div.lead p,
     font-weight: 400;
     font-size: 11px;
     line-height: 18px;
-    color: #7bafd4
+    color: #074a7b;
 }
 
 .product-target-features-list {
@@ -9580,23 +9580,10 @@ div.lead p,
     font-weight: 400;
     font-size: 13px;
     color: white;
-    padding: 8px 9px;
-    background-image: -webkit-linear-gradient(top, #7bafd4 0, #73a4c7 100%);
-    background-image: -o-linear-gradient(top, #7bafd4 0, #73a4c7 100%);
-    background-image: linear-gradient(to bottom, #7bafd4 0, #73a4c7 100%);
-    background-repeat: repeat-x;
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff7bafd4', endColorstr='#ff73a4c7', GradientType=0);
-    filter: none;
-    border: 1px solid #73a4c7;
-    border-radius: 16px;
-    text-shadow: 0 1px 1px #3b6f94;
-    -webkit-box-shadow: inset 0 -1px 0 #6c9aba;
-    box-shadow: inset 0 -1px 0 #6c9aba;
-    background: #9a9a9a;
-    border: 0;
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none
+    padding: 6px 9px;
+    border-radius: 4px;
+    background: #2a2928;
+    width: 80px;
 }
 
 .btn-secondary-footer.disabled {
@@ -9619,7 +9606,7 @@ div.lead p,
 
 .btn-secondary-footer:hover {
     color: white;
-    background: #9a9a9a
+    background: #505050;
 }
 
 .btn-viewall {
