@@ -77,8 +77,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="col-md-6">
                     <?
                     foreach($model as $item){
+                        
+                        echo $this->renderFile(__dir__."/_itemCartProduct.php",[
+                                'photo' => $item->photo,
+                                'title' => $item->title,
+                                'url' => $item->url,
+                                'price' => $item->price,
+                                'vendor' => $item->vendor,
+                                'id' => $item->id
+                            ]);
                        ?>
-                        <div class="row cart_item">
+                        <div class="row cart_item hide">
                             <div class="col-md-2">
                                 <img src="/uploads/300x200/<?= $item->photo?>" style='width:50px;'>
                             </div>
