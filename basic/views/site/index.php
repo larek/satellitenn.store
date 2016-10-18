@@ -15,7 +15,7 @@ $this->title = 'Satellitenn Store';
         <div class="carousel-inner">
             
                     <div id="header_0_rptrImageSlider_divItem_0" class="item active">
-                        <img id="header_0_rptrImageSlider_imgImage_0" src="/images/sat_slide1.jpg">
+                        <img id="header_0_rptrImageSlider_imgImage_0" src="/images/sat_slide5.jpg">
                         <div id="header_0_rptrImageSlider_divBlock_2" class="block left" style="bottom: 18%; left: 40px; width: 370px;">
                             <h2 id="header_0_rptrImageSlider_headerText_2" class="headline headline-overlay startpage-headline1 headline-dark" style="color:#262626;text-shadow:0 0 3px rgba(255,255,255,0.8);">
                                 Заголовок

@@ -564,7 +564,7 @@ span.cross-line-2 {
 .link-header {
     position: relative;
     width: 980px;
-    padding: 20px 40px;
+    padding: 10px 40px;
     -moz-column-count: 3;
     -webkit-column-count: 3;
     column-count: 3;
