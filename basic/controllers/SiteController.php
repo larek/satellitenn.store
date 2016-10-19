@@ -174,6 +174,7 @@ class SiteController extends Controller
     }
 
     public function actionCallback(){
+        
         return $this->render('callback');
     }
 
@@ -281,11 +282,13 @@ class SiteController extends Controller
     public function actionAddorder(){
         if($this->getCart()):
             $error = []; 
+            $emailData = [];
+            $emailsForSend = CartSetting::findOne(1);
+            $emailsForSend = explode(";",$emailsForSend->emails);
             $userData = json_decode($_POST['userData']);
 
             //Add new Order
             $order = new Order;
-
             $order->method = $userData->method;
             $order->delivery = $userData->delivery;
             $order->name = $userData->name;
@@ -293,10 +296,19 @@ class SiteController extends Controller
             $order->phone = $userData->phone;
             $order->city = $userData->city;
             $order->comment = $userData->comment;
-
             $order->date = date("Y:m:d H:i:s");
             $order->secret_key = md5($order->name." ".$order->phone." ".$order->date);
             $order->save();
+
+            $emailData['name'] = $userData->name;
+            $emailData['email'] = $userData->email;
+            $emailData['phone'] = $userData->phone;
+            $emailData['city'] = $userData->city;
+            $emailData['comment'] = $userData->comment;
+            $emailData['date'] = date("Y:m:d H:i:s");
+            $emailData['method'] = $userData->method;
+            $emailData['delivery'] = $userData->delivery;
+
             if(count($order->getErrors()) >0){
                     $error[] = 1;
             }
@@ -304,7 +316,10 @@ class SiteController extends Controller
             //Add product of order;
             $productsIds = array_keys($this->getCart());
             $model = Product::find()->where(['id' => $productsIds])->all();
+            $productForEmail = "<ul>";
             foreach($model as $item){
+                $productForEmail.="<li>".$item->title." - ".$item->price." руб</li>";
+
                 $orderProduct = new OrderProduct;
                 $orderProduct->order_id = $order->id;
                 $orderProduct->product_id = $item->id;
@@ -325,12 +340,32 @@ class SiteController extends Controller
                 }
 
             }
+            $productForEmail.="</ul>";
 
              if(count($error) > 0){
                 echo "false";
              }else{
                 $this->clearCart();
-                echo Url::to(['site/order','id' => $order->secret_key]);
+                $orderLink = Url::to(['site/order','id' => $order->secret_key]);
+                Yii::$app->mail->compose()
+                ->setFrom(['satellitenn.store@yandex.ru' => 'satellitenn.store'])
+                ->setTo($emailsForSend)
+                ->setSubject('Заказ №'.$order->id)
+                ->setHtmlBody("<h2>Информация о заказе</h2>
+    <p>Имя - ". $emailData['name'] ."</p>
+    <p>Email - ". $emailData['email']."</p>
+    <p>Телефон - ". $emailData['phone']."</p>
+    <p>Регион (город) - ". $emailData['city']."</p>
+    <p>Комментарий -  ". $emailData['comment']."</p>
+    <p>Дата -  ". $emailData['date']."</p>
+    <p>Способ оплаты -  ". $emailData['method']."</p>
+    <p>Метод доставки -  ". $emailData['delivery']."</p>
+    <hr>
+    <h2>Товары в заказе</h2>
+    ". $productForEmail."
+    <p>Ссылка на заказ - <a href='http://satellitenn.store'". $orderLink .">http://satellitenn.store".$orderLink."<a></p>")
+                ->send();
+                echo $orderLink;
              }
         endif;
     }
@@ -376,6 +411,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        $this->layout = 'login';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }

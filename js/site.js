@@ -28,6 +28,7 @@ $(document).ready(function() {
 		});
 
 		if(requireCount.length == 0){
+			$(".btn-order").html("Подождите").removeClass(".btn-order");
 			var userData = {
 				'method' : $(".cart-method").val(),
 				'delivery' : $(".cart-delivery").val(),
@@ -37,7 +38,6 @@ $(document).ready(function() {
 				'city' : $(".cart-city").val(),
 				'comment' : $(".cart-comment").val()
 			}
-			console.log(userData);
 			var userDataJson = JSON.stringify(userData);
 			$.post('/site/addorder',{'userData' : userDataJson}).done(function(data){
 				if(data !== 'false'){
