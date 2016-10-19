@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     
                     <div class="input-group-cart">
                         
-                        <select name="" id="" class="form-control">
+                        <select name="" id="" class="form-control cart-method">
                             <option value="">Выберете способ оплаты</option>
                             <?
                             foreach(explode(";",$cartSetting->method) as $item){

@@ -11,7 +11,11 @@ use yii\data\ActiveDataProvider;
  *
  * @property integer $id
  * @property string $name
- * @property string $contact
+ * @property string $email
+ * @property string $method
+ * @property string $delivery
+ * @property string $phone
+ * @property string $comment
  * @property string $date
  * @property string $secret_key
  * @property string $city
@@ -42,8 +46,9 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['comment'], 'string'],
             [['date'], 'safe'],
-            [['name', 'contact', 'secret_key', 'city', 'ip'], 'string', 'max' => 250]
+            [['name', 'email', 'method', 'delivery', 'phone', 'secret_key', 'city', 'ip'], 'string', 'max' => 250]
         ];
     }
 
@@ -60,6 +65,11 @@ class Order extends \yii\db\ActiveRecord
             'secret_key' => 'Secret Key',
             'city' => 'City',
             'ip' => 'Ip',
+            'email' => 'Email',
+            'method' => 'Метод',
+            'delivery' => 'Доставка',
+            'phone' => 'Телефон',
+            'comment' => 'Комментарий',
         ];
     }
 }

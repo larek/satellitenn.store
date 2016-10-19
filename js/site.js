@@ -29,9 +29,15 @@ $(document).ready(function() {
 
 		if(requireCount.length == 0){
 			var userData = {
+				'method' : $(".cart-method").val(),
+				'delivery' : $(".cart-delivery").val(),
 				'name' : $(".cart-name").val(),
-				'contact' : $(".cart-contact").val()
+				'email' : $(".cart-email").val(),
+				'phone' : $(".cart-phone").val(),
+				'city' : $(".cart-city").val(),
+				'comment' : $(".cart-comment").val()
 			}
+			console.log(userData);
 			var userDataJson = JSON.stringify(userData);
 			$.post('/site/addorder',{'userData' : userDataJson}).done(function(data){
 				if(data !== 'false'){
@@ -41,7 +47,7 @@ $(document).ready(function() {
 				}
 			});
 		}else{
-			alert('Чтобы оформить заказ, необходимо указать имя и контактные данные');
+			alert('Чтобы оформить заказ, необходимо указать телефон и email');
 		}
 	});
 

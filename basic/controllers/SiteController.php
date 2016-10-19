@@ -285,10 +285,17 @@ class SiteController extends Controller
 
             //Add new Order
             $order = new Order;
+
+            $order->method = $userData->method;
+            $order->delivery = $userData->delivery;
             $order->name = $userData->name;
-            $order->contact = $userData->contact;
+            $order->email = $userData->email;
+            $order->phone = $userData->phone;
+            $order->city = $userData->city;
+            $order->comment = $userData->comment;
+
             $order->date = date("Y:m:d H:i:s");
-            $order->secret_key = md5($order->name." ".$order->contact." ".$order->date);
+            $order->secret_key = md5($order->name." ".$order->phone." ".$order->date);
             $order->save();
             if(count($order->getErrors()) >0){
                     $error[] = 1;
