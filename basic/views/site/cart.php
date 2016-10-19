@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <br>
                     <div class="input-group-cart">
                        
-                        <select name="" id="" class="form-control">
+                        <select name="" id="" class="form-control cart-delivery">
                             <option value="">Выберете метод доставки</option>
                             <?
                             foreach(explode(";",$cartSetting->delivery) as $item){
@@ -49,19 +49,25 @@ $this->params['breadcrumbs'][] = $this->title;
                     <br>
                     <div class="input-group-cart">
                        
-                        <input type="text" class="form-control cart-name cart-require" aria-describedby="sizing-addon3" placeholder="Фамилия Имя Отчество">
+                        <input type="text" class="form-control cart-name" aria-describedby="sizing-addon3" placeholder="Фамилия Имя Отчество">
                     </div>
 
                     <br>
                     <div class="input-group-cart">
                         
-                        <input type="text" class="form-control cart-contact cart-require" aria-describedby="sizing-addon3" placeholder='Email'>
+                        <input type="text" class="form-control cart-email cart-require" aria-describedby="sizing-addon3" placeholder='Email*'>
                         
                     </div>
                     <br>
                     <div class="input-group-cart">
                         
-                        <input type="text" class="form-control cart-contact cart-require" aria-describedby="sizing-addon3" placeholder='Телефон'>
+                        <input type="text" class="form-control cart-phone cart-require" aria-describedby="sizing-addon3" placeholder='Телефон*'>
+                        
+                    </div>
+                    <br>
+                    <div class="input-group-cart">
+                        
+                        <input type="text" class="form-control cart-city" aria-describedby="sizing-addon3" placeholder='Регионг (город)'>
                         
                     </div>
                     <br>
