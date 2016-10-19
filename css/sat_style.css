@@ -5070,7 +5070,7 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-    background-color: white;
+    background-color: #505050;
     border-color: #ccc
 }
 
@@ -9476,21 +9476,17 @@ div.lead p,
 }
 
 .btn {
-    background: #ededed;
-    font-size: 11px;
-    line-height: 1;
-    color: #9a9a9a;
-    font-weight: bold;
-    padding: 7px 9px;
-    border-radius: 15px;
-    border: 0;
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none
+        font-weight: 400;
+    font-size: 13px;
+    color: white;
+    padding: 6px 9px;
+    border-radius: 4px;
+    background: #2a2928;
 }
 
 .btn:hover {
-    background-position: 0 0
+    color: white;
+    background: #505050;
 }
 
 .btn [class^="fa-"],

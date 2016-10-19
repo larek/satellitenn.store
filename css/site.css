@@ -305,6 +305,7 @@ span.cartInformer {
     height: 20px;
     text-align: center;
     margin: -10px 0px;
+    font-size: 14px;
 }
 
 .header_wrapper {
@@ -497,8 +498,8 @@ span.cross-line-2 {
 }
 
 .list-block{
-    -moz-column-count: 5; /* Для Firefox */
-    -webkit-column-count: 5; /* Для Safari и Chrome */
+    -moz-column-count: 5; /* Ð”Ð»Ñ Firefox */
+    -webkit-column-count: 5; /* Ð”Ð»Ñ Safari Ð¸ Chrome */
     column-count: 5;
     text-transform: capitalize;
 }
@@ -507,11 +508,14 @@ span.cross-line-2 {
     padding:10px;
 }
 
-.item-title{
-    height:69px;
+.item-title {
+    height: 62px;
+    overflow-y: hidden;
 }
+
 .item-description {
     height: 69px;
+
 }
 
 .title-divider{
@@ -586,11 +590,35 @@ a.category-item-title {
 
 .cartMenuItem {
     display: inline-block;
-    margin: 0px 14px 0px 0px;
+    margin: -1px 0px 0px -22px;
     color: white;
+    font-size: 22px;
+    position: absolute;
+}
+
+.cartMenuItem:hover, .cartMenuItem:active, .cartMenuItem:focus{
+    color: #e53236;
 }
 
 .callback-header-link{
     font-size: 22px !important;
     margin: -10px -14px !important;
+}
+
+a.navbar-logo>img {
+    position: absolute!important;
+    width: 165px!important;
+    margin: -6px 4px;
+}
+
+li.logoItem {
+    width: 190px;
+}
+
+.item-title>a {
+    color: #074a7b;
+}
+
+.list-inline{
+    text-align:center;
 }

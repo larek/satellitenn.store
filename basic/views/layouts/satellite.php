@@ -82,8 +82,12 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
                     <ul class="nav navbar-nav">
                         
                 
-                    <li>
+                    <li class='logoItem'>
                         <?= Html::a(Html::img('/images/logo2.png'),['site/index'],['class' => 'navbar-logo']);?>
+                    </li>
+
+                    <li>
+                        <?= Html::a('Главная',['site/index'])?>
                     </li>
 
                     <li>
@@ -320,19 +324,14 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
     
             <ul class="list-inline">
         
-            <li><a href="" class="footer-category-utility-nav">Каталог подбора</a></li>
+            <li><a href="/catalog" class="footer-category-utility-nav">Каталог</a></li>
+            <li><a href="/cart" class="footer-category-utility-nav">Корзина</a></li>
+            <li><a href="/contacts" class="footer-category-utility-nav">Контакты</a></li>
+            <li><a href="http://rentbox.satellitenn.ru" target='_blank' class="footer-category-utility-nav">Прокат</a></li>
+            <li><a href="http://satellitenn.ru" target='_blank' class="footer-category-utility-nav">Оптовикам</a></li>
+            <li><a href="" class="footer-category-utility-nav">Оплата</a></li>
+            <li><a href="" class="footer-category-utility-nav">Доставка</a></li>
         
-            <li><a href="" class="footer-category-utility-nav">Найти дилера</a></li>
-        
-            <li><a href="" class="footer-category-utility-nav">О торговой марке Thule</a></li>
-        
-            <li><a href="" class="footer-category-utility-nav">Гарантия</a></li>
-        
-            <li><a href="" class="footer-category-utility-nav">Политика конфиденциальности</a></li>
-        
-            <li><a href="" class="footer-category-utility-nav">Thule Group</a></li>
-        
-            <li><a href="" class="footer-category-utility-nav">Экстранет</a></li>
         
         </ul>
         
