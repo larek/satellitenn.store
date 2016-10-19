@@ -1,12 +1,10 @@
 $(document).ready(function() {
 
 	$(".btn-add").click(function(){
-		var btn = $(this);
-		var id = $(this).attr('id');
+		var btn = $(this),
+			id = $(this).attr('id');
 		$.post('/add',{'id' : id}).done(function(data){
-			btn.html('Товар в корзине');
-			btn.attr('disabled' , 'disabled');
-			btn.removeClass('btn-add');
+			btn.html('Товар в корзине').attr('disabled' , 'disabled').removeClass('btn-add');
 			updateCartInformer();
 		});
 	});
@@ -24,7 +22,7 @@ $(document).ready(function() {
 	});
 
 	$(".btn-order").click(function(){
-		requireCount = [];
+		var requireCount = [];
 		$(".cart-require").each(function(){
 			$(this).val() == "" ? requireCount.push(1) : false;
 		});
