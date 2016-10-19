@@ -284,7 +284,7 @@ class SiteController extends Controller
             $error = []; 
             $emailData = [];
             $emailsForSend = CartSetting::findOne(1);
-            $emailsForSend = explode(";",$emailsForSend->emails);
+            $emailsForSend = explode(";",str_replace(" ","",$emailsForSend->emails));
             $userData = json_decode($_POST['userData']);
 
             //Add new Order
@@ -363,7 +363,7 @@ class SiteController extends Controller
     <hr>
     <h2>Товары в заказе</h2>
     ". $productForEmail."
-    <p>Ссылка на заказ - <a href='http://satellitenn.store'". $orderLink .">http://satellitenn.store".$orderLink."<a></p>")
+    <p>Ссылка на заказ - <a href='http://satellitenn.store". $orderLink ."'>http://satellitenn.store".$orderLink."<a></p>")
                 ->send();
                 echo $orderLink;
              }
