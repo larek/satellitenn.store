@@ -10,6 +10,7 @@ use Yii;
  * @property integer $id
  * @property string $method
  * @property string $delivery
+ * @property string $emails
  */
 class CartSetting extends \yii\db\ActiveRecord
 {
@@ -27,8 +28,8 @@ class CartSetting extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['method', 'delivery'], 'required'],
-            [['method', 'delivery'], 'string', 'max' => 250]
+            [['method', 'delivery','emails'], 'required'],
+            [['method', 'delivery','emails'], 'string', 'max' => 250]
         ];
     }
 
@@ -41,6 +42,7 @@ class CartSetting extends \yii\db\ActiveRecord
             'id' => 'ID',
             'method' => 'Способы оплаты',
             'delivery' => 'Методы доставки',
+            'emails' => 'Получатель уведомлений о новом заказе'
         ];
     }
 }
