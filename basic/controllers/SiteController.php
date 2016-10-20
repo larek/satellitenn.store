@@ -17,6 +17,7 @@ use app\modules\admin\models\Atlant;
 use app\modules\admin\models\Order;
 use app\modules\admin\models\OrderProduct;
 use app\modules\admin\models\CartSetting;
+use app\modules\admin\models\Pages;
 
 
 class SiteController extends Controller
@@ -149,6 +150,13 @@ class SiteController extends Controller
 
     public function actionCartcount(){
         return $this->getCart() ? count($this->getCart()) : '';
+    }
+
+    public function actionPages($id){
+        $model = Pages::find()->where(['url' => $id])->one();
+        return $this->render('pages',[
+                'model' => $model
+            ]);
     }
 
     /**

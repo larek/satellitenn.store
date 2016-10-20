@@ -99,7 +99,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
                     </li>
 
                     <li>
-                        <?= Html::a('Контакты',['site/contacts'])?>
+                        <?= Html::a('Контакты',['site/pages', 'id' => 'kontakty'])?>
                     </li>
 
                     
@@ -298,11 +298,11 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
             <ul class="list-inline centered">
             
              <li>
-            <?= Html::a('Оплата',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
+            <?= Html::a('Оплата',['site/pages' , 'id' => 'oplata'],['class' => 'btn btn-secondary-footer'])?>
             </li>
 
              <li>
-            <?= Html::a('Доставка',['site/catalog'],['class' => 'btn btn-secondary-footer'])?>
+            <?= Html::a('Доставка',['site/pages', 'id' => 'dostavka'],['class' => 'btn btn-secondary-footer'])?>
             </li>
 
             <li>
@@ -310,7 +310,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
             </li>
 
             <li>
-            <?= Html::a('Контакты',['site/contacts'],['class' => 'btn btn-secondary-footer'])?>
+            <?= Html::a('Контакты',['site/pages', 'id' => 'kontakty'],['class' => 'btn btn-secondary-footer'])?>
             </li>
 
              <li>
@@ -330,11 +330,11 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
         
             <li><a href="/catalog" class="footer-category-utility-nav">Каталог</a></li>
             <li><a href="/cart" class="footer-category-utility-nav">Корзина</a></li>
-            <li><a href="/contacts" class="footer-category-utility-nav">Контакты</a></li>
+            <li><a href="/pages/kontakty" class="footer-category-utility-nav">Контакты</a></li>
             <li><a href="http://rentbox.satellitenn.ru" target='_blank' class="footer-category-utility-nav">Прокат</a></li>
             <li><a href="http://satellitenn.ru" target='_blank' class="footer-category-utility-nav">Оптовикам</a></li>
-            <li><a href="" class="footer-category-utility-nav">Оплата</a></li>
-            <li><a href="" class="footer-category-utility-nav">Доставка</a></li>
+            <li><a href="/pages/oplata" class="footer-category-utility-nav">Оплата</a></li>
+            <li><a href="/pages/dostavka" class="footer-category-utility-nav">Доставка</a></li>
         
         
         </ul>
