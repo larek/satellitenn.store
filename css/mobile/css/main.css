@@ -2401,3 +2401,8 @@ span.product-price {
     background: #2a2928!important;
     color: white!important;
 }
+
+.item_title {
+    text-align: center;
+    font-size: 25px;
+}
