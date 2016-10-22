@@ -71,4 +71,14 @@ $(document).ready(function() {
 	}
 
 	updateCartInformer();
+
+	// Mobile Filter
+	$(".filter-category").change(function(data){
+		window.location = $(this).val();
+	});
+
+	$(".filter-vendor").change(function(data){
+		window.location = $(this).val();
+	});
 });
+
