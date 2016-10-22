@@ -14,26 +14,24 @@ $this->title = 'Mobile Satellitenn Store';
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="/images/sat_slide5.jpg" alt="">
-              <div class="opacity-overlay"></div>
-              <div class="bottom center">
+              <div class="top left-align">
                 <h4 class="white-text m-0"><strong>Заголовок картинки!</strong></h4>
-                <p class="text-flow white-text m-0"></p>
+                <p class="text-flow white-text m-0"><a href="#">Подробнее</a></p>
+                
               </div>
             </div>
             <div class="swiper-slide">
-              <img src="/images/sat_slide5.jpg" alt="">
-              <div class="opacity-overlay"></div>
-              <div class="bottom left-align">
-                <h4 class="white-text m-0"><strong>Shuttle is There!</strong></h4>
-                <p class="text-flow white-text m-0">A mobile focused template</p>
+              <img src="/images/sat_slide6.jpg" alt="">
+              <div class="top left-align">
+                <h4 class="white-text m-0"><strong>Заголовок картинки!</strong></h4>
+                <p class="text-flow white-text m-0"><a href="#">Подробнее</a></p>
               </div>
             </div>
             <div class="swiper-slide">
-              <img src="/images/sat_slide5.jpg" alt="">
-              <div class="opacity-overlay"></div>
-              <div class="bottom right-align">
-                <h4 class="white-text m-0"><strong>Shuttle is There!</strong></h4>
-                <p class="text-flow white-text m-0">A mobile focused template</p>
+              <img src="/images/sat_slide7.jpg" alt="">
+              <div class="top left-align">
+                <h4 class="white-text m-0"><strong>Заголовок картинки!</strong></h4>
+                <p class="text-flow white-text m-0"><a href="#">Подробнее</a></p>
               </div>
             </div>
           </div>
@@ -45,15 +43,10 @@ $this->title = 'Mobile Satellitenn Store';
 
        
 
-        <div class="row hide">
-            <div class="col-md-12">
-                <h2>Группы товаров</h2>
-                <div class="title-divider"></div>
-            </div>
-        </div>
+        
         <br><br>
         <div class="row">
-        <div class="col-md-12">
+        <div class="">
       		<?= ListView::widget([
       			'dataProvider' => $dataProvider,
       			'itemView' => '_itemCategory',

@@ -12,11 +12,14 @@ $this->registerJsFile('/js/price-range.js',['depends' => [\yii\web\JqueryAsset::
 $this->registerCssFile('/bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css');
 ?>
 
+<div class="animated fadeinup delay-1">
+    <div class="p-20">
+
    <div class="news">
    <h1><?= $this->title?></h1>
-                <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
+                <?//= Breadcrumbs::widget([
+            //'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            //]) ?>
             
     <?= ListView::widget([
             'dataProvider' => $dataProvider,
@@ -56,4 +59,6 @@ $this->registerCssFile('/bower_components/seiyria-bootstrap-slider/dist/css/boot
                         
                     </div>
             </div>
+</div>
+</div>
        

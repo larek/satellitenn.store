@@ -4,7 +4,7 @@ $detect = new Mobile_Detect;
  
 // Any mobile device (phones or tablets).
 if ( $detect->isMobile() && !$detect->isTablet()) {
- 	$configFile = 'web.php';
+ 	$configFile = 'web-mobile.php';
 }else{
 	$configFile = 'web.php';
 }

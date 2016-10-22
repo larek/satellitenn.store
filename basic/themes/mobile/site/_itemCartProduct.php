@@ -14,7 +14,7 @@ use yii\helpers\Html;
     <p><span class='price'><?= number_format($price,0," "," ");?> руб.</span></p>
     </div>
     <div class="text-center">
-      <span class='btn btn-default btn-remove' id='<?= $id?>'><i class='fa fa-trash'></i> Убрать из корзины</span>
+      <span class='btn btn-black btn-remove' id='<?= $id?>'><i class='fa fa-trash'></i> Убрать из корзины</span>
     </div>
     </div>
   </div>

@@ -32,7 +32,7 @@ class SatelliteStyleMobile extends AssetBundle
     ];
     public $js = [
         'js/mobile/js/helper.js',
-        'js/mobile/js/vendor/HeadsUp.js',
+        // 'js/mobile/js/vendor/HeadsUp.js',
         'js/mobile/js/vendor/chart.min.js',
         'js/mobile/js/vendor/jquery.mixitup.min.js',
         'js/mobile/js/vendor/jquery.swipebox.min.js',

@@ -15,10 +15,10 @@ use yii\helpers\Html;
               <div class="card-feedback">
                 <? 
                   if (isset($cart[$model->id])){
-                    echo Html::tag('span','Товар в корзине',['class' => 'btn btn-default disable', 'disabled' => 'disabled']);
+                    echo Html::tag('span','Товар в корзине',['class' => 'btn btn-black disable', 'disabled' => 'disabled']);
                   }
                   else{
-                    echo Html::tag('span','В корзину',['class' => 'btn btn-default btn-add', 'id' => $model->id]);
+                    echo Html::tag('span','В корзину',['class' => 'btn btn-black btn-add', 'id' => $model->id]);
                   }
                 ?>
               </div>

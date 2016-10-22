@@ -11,10 +11,15 @@ use yii\widgets\Breadcrumbs;
 $this->title = $model->title;
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="content content-margin">
+
+<div class="animated fadeinup delay-1">
+<div class="p-20">
+	<div class="content content-margin">
             <h1><?= $this->title?></h1>
-            <?= Breadcrumbs::widget([
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
+            <?//= Breadcrumbs::widget([
+               // 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            //]) ?>
             <?= $model->content;?>
+	</div>
+</div>
 </div>
