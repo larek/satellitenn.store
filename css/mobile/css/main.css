@@ -2406,3 +2406,10 @@ span.product-price {
     text-align: center;
     font-size: 25px;
 }
+
+.item-description{
+  padding-bottom: 10px;
+}
+
+.price {
+    font-size: 25px;

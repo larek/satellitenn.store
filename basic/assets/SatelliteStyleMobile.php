@@ -25,7 +25,7 @@ class SatelliteStyleMobile extends AssetBundle
         'css/mobile/css/swipebox.min.css',
         'css/mobile/css/swiper.min.css',
         'css/mobile/css/normalize.css',
-        'css/mobile/css/main.css?v=1.0.1',
+        'css/mobile/css/main.css?v=1.0.2',
         '/bower_components/font-awesome/css/font-awesome.min.css'
 
 
