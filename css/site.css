@@ -622,3 +622,8 @@ li.logoItem {
 .list-inline{
     text-align:center;
 }
+
+.slider_title{
+    color: white;
+    text-shadow: 2px 2px black;
+}
