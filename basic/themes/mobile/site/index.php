@@ -39,14 +39,14 @@ $this->title = 'Mobile Satellitenn Store';
           <div class="swiper-pagination"></div>
         </div>
         <!-- End of Slider -->
-        <div class="content">
+        
 
        
 
         
-        <br><br>
-        <div class="row">
-        <div class="">
+        <br>
+        <div class="animated fadeinup delay-1">
+        <div class="p-20">
       		<?= ListView::widget([
       			'dataProvider' => $dataProvider,
       			'itemView' => '_itemCategory',
@@ -58,9 +58,7 @@ $this->title = 'Mobile Satellitenn Store';
         
         
 
-            
-              
-        </div>
+      
 
     
     
