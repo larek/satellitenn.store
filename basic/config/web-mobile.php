@@ -17,10 +17,10 @@ $config = [
     'components' => [
         'view' => [
             'theme' => [
-                'basePath' => '@app/themes/basic',
-                'baseUrl' => '@app/themes/basic',
+                'basePath' => '@app/themes/mobile',
+                'baseUrl' => '@app/themes/mobile',
                 'pathMap' => [
-                    '@app/views' => '@app/themes/basic',
+                    '@app/views' => '@app/themes/mobile',
                 ],
             ]
         ],

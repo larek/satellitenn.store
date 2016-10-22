@@ -17,43 +17,43 @@ $this->title = 'Satellitenn Store';
                     <div id="header_0_rptrImageSlider_divItem_0" class="item active">
                         <img id="header_0_rptrImageSlider_imgImage_0" src="/images/sat_slide5.jpg">
                         <div id="header_0_rptrImageSlider_divBlock_2" class="block left" style="bottom: 18%; left: 40px; width: 370px;">
-                            <h2 id="header_0_rptrImageSlider_headerText_2" class="headline headline-overlay startpage-headline1 headline-dark" style="color:#262626;text-shadow:0 0 3px rgba(255,255,255,0.8);">
+                            <h2 class='slider_title'>
                                 Заголовок
                             </h2>
-                            <h3 id="header_0_rptrImageSlider_headerText2_2" class="headline headline-overlay startpage-headline3 headline-dark" style="color:#262626;text-shadow:0 0 3px rgba(255,255,255,0.8);">
+                            <h3>
                                 
                             </h3>
-                            <a href="#" style="background-color: #78abcf;border: 1px solid #73a4c7;text-shadow: 0px 1px 1px #3b6f94;-webkit-box-shadow: inset 0px -1px 0px #6c9aba;-moz-box-shadow: inset 0px -1px 0px #6c9aba;box-shadow: inset 0px -1px 0px #6c9aba;background-image: none;" class="btn btn-primary btn-overlay tag-manager-homepage-button">
+                            <a href="#" class="btn btn-default">
                                 Подробная информация
                             </a>
                         </div>
                     </div>
                 
                     <div id="header_0_rptrImageSlider_divItem_1" class="item">
-                        <img id="header_0_rptrImageSlider_imgImage_1" src="/images/sat_slide2.jpg">
+                        <img id="header_0_rptrImageSlider_imgImage_1" src="/images/sat_slide6.jpg">
                        <div id="header_0_rptrImageSlider_divBlock_2" class="block left" style="bottom: 18%; left: 40px; width: 370px;">
-                            <h2 id="header_0_rptrImageSlider_headerText_2" class="headline headline-overlay startpage-headline1 headline-dark" style="color:#262626;text-shadow:0 0 3px rgba(255,255,255,0.8);">
+                            <h2 class='slider_title'>
                                 Заголовок
                             </h2>
-                            <h3 id="header_0_rptrImageSlider_headerText2_2" class="headline headline-overlay startpage-headline3 headline-dark" style="color:#262626;text-shadow:0 0 3px rgba(255,255,255,0.8);">
+                            <h3 >
                                 
                             </h3>
-                            <a href="#" style="background-color: #78abcf;border: 1px solid #73a4c7;text-shadow: 0px 1px 1px #3b6f94;-webkit-box-shadow: inset 0px -1px 0px #6c9aba;-moz-box-shadow: inset 0px -1px 0px #6c9aba;box-shadow: inset 0px -1px 0px #6c9aba;background-image: none;" class="btn btn-primary btn-overlay tag-manager-homepage-button">
+                            <a href="#" class="btn btn-default">
                                 Подробная информация
                             </a>
                         </div>
                     </div>
                 
                     <div id="header_0_rptrImageSlider_divItem_2" class="item ">
-                        <img id="header_0_rptrImageSlider_imgImage_2" src="/images/sat_slide3.jpg">
+                        <img id="header_0_rptrImageSlider_imgImage_2" src="/images/sat_slide7.jpg">
                         <div id="header_0_rptrImageSlider_divBlock_2" class="block left" style="bottom: 18%; left: 40px; width: 370px;">
-                            <h2 id="header_0_rptrImageSlider_headerText_2" class="headline headline-overlay startpage-headline1 headline-dark" style="color:#262626;text-shadow:0 0 3px rgba(255,255,255,0.8);">
+                            <h2 class='slider_title'>
                                 Заголовок
                             </h2>
-                            <h3 id="header_0_rptrImageSlider_headerText2_2" class="headline headline-overlay startpage-headline3 headline-dark" style="color:#262626;text-shadow:0 0 3px rgba(255,255,255,0.8);">
+                            <h3 >
                                 
                             </h3>
-                            <a href="#" style="background-color: #78abcf;border: 1px solid #73a4c7;text-shadow: 0px 1px 1px #3b6f94;-webkit-box-shadow: inset 0px -1px 0px #6c9aba;-moz-box-shadow: inset 0px -1px 0px #6c9aba;box-shadow: inset 0px -1px 0px #6c9aba;background-image: none;" class="btn btn-primary btn-overlay tag-manager-homepage-button">
+                            <a href="#" class="btn btn-default">
                                 Подробная информация
                             </a>
                         </div>
