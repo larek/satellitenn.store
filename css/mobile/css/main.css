@@ -2413,3 +2413,13 @@ span.product-price {
 
 .price {
     font-size: 25px;
+}
+
+.pagination li {
+    padding:0px;
+}
+
+.pagination > .active > a{
+  background-color: #2a2928;
+    border-color: #2a2928;
+}    
