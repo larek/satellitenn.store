@@ -20,6 +20,7 @@ use app\modules\admin\models\Vendor;
  * @property integer $priceVendor
  * @property double $price
  * @property integer $available
+ * @property integer $active
  */
 class Product extends \yii\db\ActiveRecord
 {
@@ -44,7 +45,7 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             [['category_id','title'], 'required'],
-            [['category_id', 'vendor_id', 'available'], 'integer'],
+            [['category_id', 'vendor_id', 'available','active'], 'integer'],
             [['description'], 'string'],
             [['priceVendor', 'price'], 'number'],
             [['title', 'skuVendor', 'sku', 'photo'], 'string', 'max' => 250]
@@ -67,7 +68,8 @@ class Product extends \yii\db\ActiveRecord
             'description' => 'Описание',
             'priceVendor' => 'Цена производителя',
             'price' => 'Цена',
-            'available' => 'Активен',
+            'available' => 'В наличии',
+            'active' => 'Активен'
         ];
     }
 }

@@ -13,6 +13,13 @@ use yii\helpers\Html;
     <p><?= $model->vendor->title;?></p>
     <p><span class='price'><?= number_format($model->price,0," "," ");?> руб.</span></p>
     </div>
+    <div class='available'>
+      <?if($model->available == 1):?>
+      <span class='label label-success'><i class="fa fa-check-square-o"></i> В наличии</span>
+      <?else:?>
+      <span class="label label-default"><i class='fa fa-truck'></i> Доставка за 3 дня</span>
+      <?endif;?>
+    </div>
     <div class="text-center">
     <? 
       if (isset($cart[$model->id])){

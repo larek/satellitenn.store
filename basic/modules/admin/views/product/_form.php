@@ -43,6 +43,8 @@ use dosamigos\tinymce\TinyMce;
         <?= $form->field($model, 'price')->textInput() ?>
 
         <?= $form->field($model, 'available')->checkbox() ?>
+
+        <?= $form->field($model, 'active')->checkbox() ?>
 </div>
 <div class="col-md-8">
         <?

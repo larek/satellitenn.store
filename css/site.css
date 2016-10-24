@@ -627,3 +627,18 @@ li.logoItem {
     color: white;
     text-shadow: 2px 2px black;
 }
+
+.available {
+    text-align: center;
+    padding: 10px 0px;
+    font-weight: normal;
+}
+
+.available > .label {
+    font-weight:normal;
+}
+
+.price-product-page{
+    font-weight:bold;
+    color:black;
+}

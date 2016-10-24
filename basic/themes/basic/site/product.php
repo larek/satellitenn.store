@@ -24,8 +24,20 @@ $this->params['breadcrumbs'][] = $this->title;
                         </tr>
 						<tr>
 							<td>Цена</td>
-							<td><span class='price'><?= number_format($model->price,0," "," ")?> руб. </span></td>
+							<td><span class='price price-product-page'><?= number_format($model->price,0," "," ")?> руб. </span></td>
 						</tr>
+                        <tr>
+                            <td>Наличие</td>
+                            <td>
+                                 
+                                  <?if($model->available == 1):?>
+                                  <span class='product-cart-label-success'><i class="fa fa-check-square-o"></i> В наличии</span>
+                                  <?else:?>
+                                  <span class="product-cart-label-delivery"><i class='fa fa-truck'></i> Доставка за 3 дня</span>
+                                  <?endif;?>
+                                
+                            </td>
+                        </tr>
 					</table>
                     <? 
                       if (isset($cart[$model->id])){
