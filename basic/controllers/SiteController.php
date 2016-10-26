@@ -167,7 +167,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-                'query' => Category::find()->orderBy(['order_id' => SORT_ASC]),
+                'query' => Category::find()->orderBy(['order_id' => SORT_ASC])->andWhere(['active' => 1]),
                 'pagination' => [
                     'pageSize' => 20
                 ]
@@ -189,7 +189,7 @@ class SiteController extends Controller
     public function actionCatalog()
     {
         $dataProvider = new ActiveDataProvider([
-                'query' => Category::find()->orderBy(['order_id' => SORT_ASC]),
+                'query' => Category::find()->orderBy(['order_id' => SORT_ASC])->andWhere(['active' => 1]),
                 'pagination' => [
                     'pageSize' => 20
                 ]
@@ -201,7 +201,7 @@ class SiteController extends Controller
 
     public function actionCategory($id){
         $model= Category::find()->where(['url' => $id])->one();
-        $query = Product::find()->where(['category_id' => $model->id]);
+        $query = Product::find()->where(['category_id' => $model->id])->andWhere(['active' => 1]);
         if(isset($_GET['vendor'])){
             $query->andWhere(['vendor_id' => $_GET['vendor']]);
         }
