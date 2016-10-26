@@ -15,9 +15,9 @@ use yii\helpers\Html;
     </div>
     <div class='available'>
       <?if($model->available == 1):?>
-      <span class='label label-success'><i class="fa fa-check-square-o"></i> В наличии</span>
+      <span class='product-cart-label-success'><i class="fa fa-check-square-o"></i> В наличии</span>
       <?else:?>
-      <span class="label label-default"><i class='fa fa-truck'></i> Доставка за 3 дня</span>
+      <span class="product-cart-label-delivery"><i class='fa fa-truck'></i> Доставка за 3 дня</span>
       <?endif;?>
     </div>
     <div class="text-center">

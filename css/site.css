@@ -642,3 +642,11 @@ li.logoItem {
     font-weight:bold;
     color:black;
 }
+
+.product-cart-label-success {
+    color: #5cb85c;
+}
+
+.product-cart-label-delivery {
+    color: #5bc0de;
+}

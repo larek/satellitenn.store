@@ -2432,3 +2432,11 @@ span.product-price {
 .filter-select{
   display:block;
 }
+
+.product-cart-label-success {
+    color: #5cb85c;
+}
+
+.product-cart-label-delivery {
+    color: #5bc0de;
+}
