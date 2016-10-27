@@ -30,7 +30,8 @@ use dosamigos\tinymce\TinyMce;
         
         <? 
         $vendorItems = ArrayHelper::map(Vendor::find()->all(),'id','title');
-        array_unshift($vendorItems, 'Выберите производителя');
+        $vendorItems[0] = 'Выберете производителя';
+        ksort($vendorItems);
         echo $form->field($model, 'vendor_id')->dropDownList($vendorItems); ?>
 
         <?= $form->field($model, 'title')->textInput(['maxlength' => 250]) ?>
