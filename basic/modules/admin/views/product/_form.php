@@ -24,9 +24,9 @@ use dosamigos\tinymce\TinyMce;
         
         <?
         $categoryItems = ArrayHelper::map(Category::find()->all(),'id','title');
-        
-        array_unshift($categoryItems, 'Выберите категорию');
-       echo $form->field($model, 'category_id')->dropDownList($categoryItems) ?>
+        $categoryItems[0] = 'Выберете категорию';
+        ksort($categoryItems);
+        echo $form->field($model, 'category_id')->dropDownList($categoryItems) ?>
         
         <? 
         $vendorItems = ArrayHelper::map(Vendor::find()->all(),'id','title');
