@@ -105,9 +105,9 @@ class SliderController extends Controller
 
             
             $model->save();
-            $modelUrl = Slider::findOne($model->id);
-            $modelUrl->guid = Yii::$app->str2url->parse($model->title." ".$model->id); 
-            $modelUrl->save();
+            // $modelUrl = Slider::findOne($model->id);
+            // $modelUrl->guid = Yii::$app->str2url->parse($model->title." ".$model->id); 
+            // $modelUrl->save();
             return $this->redirect(['view', 'id' => $model->id]);
 
         } else {
@@ -173,9 +173,9 @@ class SliderController extends Controller
 
             
             $model->save();
-            $modelUrl = Slider::findOne($model->id);
-            $modelUrl->guid = Yii::$app->str2url->parse($model->title." ".$model->id); 
-            $modelUrl->save();
+            // $modelUrl = Slider::findOne($model->id);
+            // $modelUrl->guid = Yii::$app->str2url->parse($model->title." ".$model->id); 
+            // $modelUrl->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
