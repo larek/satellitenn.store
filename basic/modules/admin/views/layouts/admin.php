@@ -41,6 +41,7 @@ AppAsset::register($this);
             ['label' => 'Производители', 'url' => ['/admin/vendor/index']],
             ['label' => 'Товары', 'url' => ['/admin/product/index']],
             ['label' => 'Страницы', 'url' => ['/admin/pages/index']],
+            ['label' => 'Слайдер', 'url' => ['/admin/slider/index']],
             ['label' => 'Заказы', 'url' => ['/admin/order/index']],
             [
                 'label' => 'Настройки',

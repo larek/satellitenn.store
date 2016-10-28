@@ -26,12 +26,18 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            // ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'title',
-            'content:ntext',
-            'guid',
+            // 'id',
+            [
+                'attribute' => 'title',
+                'format' => 'raw',
+                'value' => function($data){
+                    return Html::a($data->title,['update','id'=>$data->id]);
+                }
+            ],
+            // 'content:ntext',
+            // 'guid',
             'order_id',
             // 'image',
 
