@@ -348,73 +348,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
 
 
         
-
-
-<!-- Modal -->
-<!-- <div id="marketselector" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="marketselectorlabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <div class="headline2" id="marketselectorlabel">Select country</div>
-            </div>
-            <div class="modal-body">
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div> -->
-        
-<!-- <div id="familymodal" class="modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"></div></div></div> -->
-        
-
- <!--    
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['mainform'];
-if (!theForm) {
-    theForm = document.mainform;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script> -->
-
-<!-- 
-<script src="/WebResource.axd?d=u1iAAwFrj7BQPmYKT_00Aa8HsNOlBtoUIoJEs_p9r1VY8diGWGsJF_fQWWYjiDOXJ-SuT7oph1BvhnBZRIc6q57DoPc1&amp;t=635875545181218729" type="text/javascript"></script>
-</form>
-
-    
-<script>var host = 'www.thule.com'; </script>
-<script src="https://cdn1.static-tgdp.com/ui/trede/release/rel-jquery-8FC25E27D42774AEAE6EDBC0A18B72AA.js"></script>
-
-<script> $.noConflict();</script>
-
-<script src="https://cdn1.static-tgdp.com/ui/trede/release/rel-main-FBD3C11B3E0527D21C27E8F556A73D43.js"></script>
- -->
-
-<!--[if lte IE 9]>
-    <script src="https://cdn1.static-tgdp.com/ui/trede/release/rel-lte-ie9-603E63BA48D0D29F68E7C185325F117A.js"></script>
-<![endif]-->
-    
-    
-    <!-- SC6-PRO-THU -->
-
-
-<!-- 
-<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","917790871640714");fbq("track","PageView");</script>
-<noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=917790871640714&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript><script type="text/javascript" id="">var ezt=ezt||[];(function(){var a=document.createElement("script");a.src=("https:"==document.location.protocol?"https://secure":"http://pixel")+".quantserve.com/aquant.js?a\x3dp-Aba75g5na8CRd";a.async=!0;a.type="text/javascript";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();ezt.push({qacct:"p-Aba75g5na8CRd",orderid:"",revenue:""});</script>
-<noscript>
-  &lt;img src="//pixel.quantserve.com/pixel/p-Aba75g5na8CRd.gif?labels=_fp.event.Default" style="display: none;" border="0" height="1" width="1" alt="Quantcast"&gt;
-</noscript> -->
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40560080 = new Ya.Metrika({ id:40560080, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/40560080" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
         
 
         <?php $this->endBody() ?>

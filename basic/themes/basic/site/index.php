@@ -13,21 +13,29 @@ $this->title = 'Satellitenn Store';
        
 
         <div class="carousel-inner">
-            
-                    <div id="header_0_rptrImageSlider_divItem_0" class="item active">
-                        <img id="header_0_rptrImageSlider_imgImage_0" src="/images/sat_slide5.jpg">
+                    <? 
+                    $n=0;
+                    foreach($slides as $slide){
+
+                    ?>
+                    <div id="header_0_rptrImageSlider_divItem_<?= $n?>" class="item active">
+                        <img id="header_0_rptrImageSlider_imgImage_<?= $n?>" src="/uploads/980x550/<?= $slide->image?>">
                         <div id="header_0_rptrImageSlider_divBlock_2" class="block left" style="bottom: 18%; left: 40px; width: 370px;">
                             <h2 class='slider_title'>
-                                Заголовок
+                                <?= $slide->title?>
                             </h2>
                             <h3>
                                 
                             </h3>
-                            <a href="#" class="btn btn-default">
+                            <a href="<?= $slide->guid?>" class="btn btn-default">
                                 Подробная информация
                             </a>
                         </div>
                     </div>
+
+                    <?
+                    $n++;
+                    }?>
                 
                     <div id="header_0_rptrImageSlider_divItem_1" class="item">
                         <img id="header_0_rptrImageSlider_imgImage_1" src="/images/sat_slide6.jpg">
@@ -64,12 +72,19 @@ $this->title = 'Satellitenn Store';
         </div>
          
                 <ol class="carousel-indicators">
+                <?
+                $n=0;
+                foreach($slides as $slide){
+
+                ?>
+                <li data-target="#BackgroundImageCarousel" data-slide-to="<?= $n?>"></li>
+                <?
+                $n++;
+                }
+                ?>
+               <!--  <li data-target="#BackgroundImageCarousel" data-slide-to="1" class=""></li>
             
-                <li data-target="#BackgroundImageCarousel" data-slide-to="0" class="active"></li>
-            
-                <li data-target="#BackgroundImageCarousel" data-slide-to="1" class=""></li>
-            
-                <li data-target="#BackgroundImageCarousel" data-slide-to="2" class=""></li>
+                <li data-target="#BackgroundImageCarousel" data-slide-to="2" class=""></li> -->
             
             
                 </ol>

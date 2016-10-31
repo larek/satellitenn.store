@@ -18,6 +18,7 @@ use app\modules\admin\models\Order;
 use app\modules\admin\models\OrderProduct;
 use app\modules\admin\models\CartSetting;
 use app\modules\admin\models\Pages;
+use app\modules\admin\models\Slider;
 
 
 class SiteController extends Controller
@@ -172,8 +173,10 @@ class SiteController extends Controller
                     'pageSize' => 20
                 ]
             ]);
+        $slides = Slider::find()->orderBy(['order_id' => SORT_ASC])->all();
         return $this->render('index',[
-                'dataProvider' => $dataProvider
+                'dataProvider' => $dataProvider,
+                'slides' => $slides
             ]);
     }
 
