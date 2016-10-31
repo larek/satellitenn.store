@@ -7,9 +7,9 @@ $this->registerJsFile('/bower_components/fotorama/fotorama.js', ['depends' => [\
 $this->registerCssFile('/bower_components/fotorama/fotorama.css');
 ?>
 
-<div class="fotorama" style='width:980px;height:550px'>
+<div class="fotorama">
     <? foreach($slides as $slide){?>
-    <div data-img="/uploads/980x550/<?= $slide->image?>" ><?= $slide->title?></div>
+    <div data-img="/uploads/980x550/<?= $slide->image?>" ><div class='slide_caption'><span class='slide_title'><?= $slide->title?></span><br><a class='btn btn-default' href='<?= $slide->guid?>'>Подробнее</a></div></div>
     <?}?>
 </div>
     

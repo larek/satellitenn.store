@@ -650,3 +650,17 @@ li.logoItem {
 .product-cart-label-delivery {
     color: #5bc0de;
 }
+
+.slide_caption {
+    position: absolute;
+    margin: 380px 60px;
+    width: 400px;
+}
+
+span.slide_title {
+    display: inline-block;
+    padding: 10px 0px;
+    font-size: 38px;
+    color: white;
+    text-shadow: 0 0 9px rgb(42, 41, 40);
+}
