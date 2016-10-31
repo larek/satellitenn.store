@@ -9,31 +9,21 @@ $this->title = 'Mobile Satellitenn Store';
 
 
 
-<!-- Slider -->         
+<!-- Slider -->    
+ 
         <div class="swiper-container swiper-slider">
           <div class="swiper-wrapper">
+
+          <? foreach($slides as $slide){?>
             <div class="swiper-slide">
-              <img src="/images/sat_slide5.jpg" alt="">
+              <img src="/uploads/980x550/<?= $slide->image?>" alt="">
               <div class="top left-align">
-                <h4 class="white-text m-0"><strong>Заголовок картинки!</strong></h4>
-                <p class="text-flow white-text m-0"><a href="#">Подробнее</a></p>
+                <h4 class="white-text m-0"><strong><?= $slide->title?></strong></h4>
+                <p class="text-flow white-text m-0"><a href="<?= $slide->guid?>">Подробнее</a></p>
                 
               </div>
             </div>
-            <div class="swiper-slide">
-              <img src="/images/sat_slide6.jpg" alt="">
-              <div class="top left-align">
-                <h4 class="white-text m-0"><strong>Заголовок картинки!</strong></h4>
-                <p class="text-flow white-text m-0"><a href="#">Подробнее</a></p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img src="/images/sat_slide7.jpg" alt="">
-              <div class="top left-align">
-                <h4 class="white-text m-0"><strong>Заголовок картинки!</strong></h4>
-                <p class="text-flow white-text m-0"><a href="#">Подробнее</a></p>
-              </div>
-            </div>
+          <?}?>
           </div>
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
