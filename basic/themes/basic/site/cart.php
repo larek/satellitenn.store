@@ -67,7 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <br>
                     <div class="input-group-cart">
                         
-                        <input type="text" class="form-control cart-city" aria-describedby="sizing-addon3" placeholder='Регионг (город)'>
+                        <input type="text" class="form-control cart-city" aria-describedby="sizing-addon3" placeholder='Регион (город)'>
                         
                     </div>
                     <br>
