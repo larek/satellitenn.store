@@ -55,7 +55,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
       <div class="page animated fadein">
         
         <?= $content?>
-
+        <span class="btn btn-default btn-black btn-up"><i class="fa fa-arrow-up"></i> наверх</span>
         <!-- Footer -->
         <footer class="page-footer primary-color">
           <div class="section center">

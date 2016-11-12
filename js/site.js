@@ -1,5 +1,29 @@
 $(document).ready(function() {
 
+	//button for scrolling to top
+
+	$(".btn-up").css({
+	    display:'none',
+	    position: 'fixed',
+	    bottom: '0px',
+	    opacity: '0.8',
+	    width: '100%'
+	});
+
+	console.log($('btn-up').width());
+	$(window).scroll(function(){
+		var top = $(this).scrollTop();
+		if(top > 200){
+			$(".btn-up").fadeIn();
+		}else{
+			$(".btn-up").fadeOut();
+		}
+	});
+
+	$(".btn-up").click(function(){
+		$('body, html').animate({scrollTop: 0},'slow');
+	});
+
 	$(".btn-add").click(function(){
 		var btn = $(this),
 			id = $(this).attr('id');
