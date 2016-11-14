@@ -236,8 +236,9 @@ class SiteController extends Controller
     }
 
     public function actionSearch($id){
+
         $dataProvider = new ActiveDataProvider([
-                'query' => Product::find()->where(['like','title',$id]),
+                'query' => Product::find()->where(['like','title',$id])->orFilterWhere(['like','skuVendor',$id])->orFilterWhere(['like','sku',$id]),
                 'pagination' => [
                     'pageSize' => 20
                 ]
