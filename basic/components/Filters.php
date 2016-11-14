@@ -47,7 +47,7 @@ class Filters extends Widget{
 		</div>
 
 		<?
-		if($this->dataProvider->getCount()>0):
+		// if($this->dataProvider->getCount()>0):
 
 		
 		$product  = Product::find()->where(['category_id' => $CurrentCategory->id])->all();
@@ -110,7 +110,7 @@ class Filters extends Widget{
 			<span class='price-range-label'><i class='fa fa-rub'></i> <?= max($productPrices)?></span>
 		</div>
 		<?
-		endif;
+		// endif;
 	}
 
 
