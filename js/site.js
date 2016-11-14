@@ -6,6 +6,7 @@ $(document).ready(function() {
 	    'display':'none',
 	    'position': 'fixed',
 	    'bottom': '0px',
+	    'right': '0px',
 	    'opacity': '0.5',
 	    'z-index': '10'
 	    
