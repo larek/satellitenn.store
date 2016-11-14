@@ -39,8 +39,8 @@ class SatelliteStyleMobile extends AssetBundle
         'js/mobile/js/vendor/masonry.min.js',
         'js/mobile/js/vendor/swiper.min.js',
         'js/mobile/js/vendor/materialize.min.js',
-        'js/mobile/js/main.js?v=1.0.2',
-        'js/site.js?v=1.0.4'
+        'js/mobile/js/main.js?v=1.0.3',
+        'js/site.js?v=1.0.5'
     ];
     public $depends = [
         'yii\web\YiiAsset',

@@ -6,8 +6,9 @@ $(document).ready(function() {
 	    display:'none',
 	    position: 'fixed',
 	    bottom: '0px',
-	    opacity: '0.8',
-	    width: '100%'
+	    opacity: '0.5',
+	    z-index: '10'
+	    
 	});
 
 	console.log($('btn-up').width());
