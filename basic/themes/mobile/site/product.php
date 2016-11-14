@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
   <!-- Slider -->         
   <div class="swiper-container swiper-slider">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
+      <div class="swiper-sliced">
         <div class='product_photo_slide'><?= Html::img('/uploads/'.$model->photo, ['class' => 'img img-responsive'])?></div>
       </div>
     </div>

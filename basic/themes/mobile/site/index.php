@@ -15,7 +15,7 @@ $this->title = 'Mobile Satellitenn Store';
           <div class="swiper-wrapper">
 
           <? foreach($slides as $slide){?>
-            <div class="swiper-slide" data-swiper-autoplay="5000">
+            <div class="swiper-slide" >
               <img src="/uploads/980x550/<?= $slide->image?>" alt="">
               <div class="top left-align">
                 <h4 class="white-text m-0"><strong><?= $slide->title?></strong></h4>
