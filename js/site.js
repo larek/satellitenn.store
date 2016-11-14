@@ -3,11 +3,11 @@ $(document).ready(function() {
 	//button for scrolling to top
 
 	$(".btn-up").css({
-	    display:'none',
-	    position: 'fixed',
-	    bottom: '0px',
-	    opacity: '0.5',
-	    z-index: '10'
+	    'display':'none',
+	    'position': 'fixed',
+	    'bottom': '0px',
+	    'opacity': '0.5',
+	    'z-index': '10'
 	    
 	});
 
