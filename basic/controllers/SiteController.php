@@ -204,6 +204,8 @@ class SiteController extends Controller
 
     public function actionCategory($id){
         $model= Category::find()->where(['url' => $id])->one();
+        $product = Product::find()->where(['category_id' => $model->id])->all();
+        $productCount = count($product);
         $query = Product::find()->where(['category_id' => $model->id])->andWhere(['active' => 1]);
         if(isset($_GET['vendor'])){
             $query->andWhere(['vendor_id' => $_GET['vendor']]);
@@ -224,7 +226,8 @@ class SiteController extends Controller
                 'model' => $model,
                 'cart' => $cart,
                 'url' => $id,
-                'dataProvider' => $dataProvider
+                'dataProvider' => $dataProvider,
+                'productCount' => $productCount,
             ]);
     }
 

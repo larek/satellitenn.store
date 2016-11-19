@@ -22,7 +22,7 @@ $this->registerCssFile('/bower_components/seiyria-bootstrap-slider/dist/css/boot
             <div class="table-header">
                     <?= FiltersMobile::widget([
                         'url' => $url,
-                        'dataProvider' => $dataProvider
+                        'productCount' => $productCount
                     ]);?>
             </div>
 

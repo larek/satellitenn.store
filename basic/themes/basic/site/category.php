@@ -25,7 +25,7 @@ $this->registerCssFile('/bower_components/seiyria-bootstrap-slider/dist/css/boot
                         <div class="row ">
                         <?= Filters::widget([
                         	'url' => $url,
-                            'dataProvider' => $dataProvider
+                            'productCount' => $productCount
                         ]);?>
                         </div>
                     </div>

@@ -13,7 +13,7 @@ use app\modules\admin\models\Vendor;
 
 class Filters extends Widget{
 	public $url;
-	public $dataProvider;
+	public $productCount;
 
 	public function run(){
 		$CurrentCategory = Category::find()->where(['url' => $this->url])->one();
@@ -47,7 +47,7 @@ class Filters extends Widget{
 		</div>
 
 		<?
-		// if($this->dataProvider->getCount()>0):
+		if($this->productCount > 0):
 
 		
 		$product  = Product::find()->where(['category_id' => $CurrentCategory->id])->all();
@@ -110,7 +110,7 @@ class Filters extends Widget{
 			<span class='price-range-label'><i class='fa fa-rub'></i> <?= max($productPrices)?></span>
 		</div>
 		<?
-		// endif;
+		endif;
 	}
 
 
