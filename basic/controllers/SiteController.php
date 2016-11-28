@@ -215,6 +215,13 @@ class SiteController extends Controller
             $query->andWhere('price >= '.$price[0]);
             $query->andWhere('price <= '.$price[1]);
         }
+        if(isset($_GET['sort']) && $_GET['sort'] == 'asc'){
+            $query->orderBy(['price' => SORT_ASC]);
+        }elseif(isset($_GET['sort']) && $_GET['sort'] == 'desc'){
+            $query->orderBy(['price' => SORT_DESC]);
+        }else{
+            $query->orderBy(['price' => SORT_ASC]);
+        }
         $dataProvider = new ActiveDataProvider([
                 'query' => $query,
                 'pagination' => [

@@ -31,8 +31,7 @@ $this->title = 'Mobile Satellitenn Store';
         <!-- End of Slider -->
         
 
-       
-
+      
         
         <br>
         <div class="animated fadeinup delay-1">

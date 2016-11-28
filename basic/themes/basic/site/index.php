@@ -9,7 +9,13 @@ $this->registerCssFile('/bower_components/fotorama/fotorama.css');
 
 <div class="fotorama" data-autoplay="5000">
     <? foreach($slides as $slide){?>
-    <div data-img="/uploads/980x550/<?= $slide->image?>" ><div class='slide_caption'><span class='slide_title'><?= $slide->title?></span><br><a class='btn btn-default' href='<?= $slide->guid?>'>Подробнее</a></div></div>
+    <div data-img="/uploads/980x550/<?= $slide->image?>" >
+        <div class='slide_caption'>
+            <span class='slide_title'><?= $slide->title?></span>
+            <br>
+            <a class='btn btn-default' href='<?= $slide->guid?>'>Подробнее</a>
+        </div>
+    </div>
     <?}?>
 </div>
     

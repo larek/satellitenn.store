@@ -106,5 +106,9 @@ $(document).ready(function() {
 	$(".filter-vendor").change(function(data){
 		window.location = $(this).val();
 	});
+
+	$(".filter-sort").change(function(data){
+		window.location = $(this).val();
+	});
 });
 

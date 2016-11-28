@@ -77,10 +77,27 @@ class FiltersMobile extends Widget{
 			$maxPrice = $getPrice[1];
 		}
 		?>
+
+
+		<div class='filter-input-group'>
+			<span class='filter-label'>Сортировка:</span><br>
+			<? 
+				if(isset($_GET['vendor'])){
+					$currentSort = isset($_GET['sort']) ?  Url::to(['site/category', 'id' => $this->url, 'vendor' => $_GET['vendor'], 'sort' => $_GET['sort']]) : '';
+				}else{
+					$currentSort = isset($_GET['sort']) ?  Url::to(['site/category', 'id' => $this->url, 'sort' => $_GET['sort']]) : '';
+				}
+				$itemsSort = [
+					isset($_GET['vendor']) ? Url::to(['site/category','id' => $this->url,'vendor' => $_GET['vendor'],'sort'=>'asc']) : Url::to(['site/category','id' => $this->url,'sort'=>'asc']) => 'По возрастанию цены',
+					isset($_GET['vendor']) ? Url::to(['site/category','id' => $this->url,'vendor' => $_GET['vendor'],'sort'=>'desc']) : Url::to(['site/category','id' => $this->url,'sort'=>'desc']) => 'По убыванию цены'
+				];
+				echo Html::dropDownList('sort',$currentSort,$itemsSort,['class' => 'filter-select filter-sort']);
+			?>
+		</div>
 		<div class='filter-input-group input-group hide'>
 			<span class='filter-label'>Цена:</span><br>
 			<span class='price-range-label'><i class='fa fa-rub'></i> <?= min($productPrices)?></span>
-			<?= Html::input('text','','', ['id' => 'ex2', 'class' => 'span2', 'data-slider-min' => min($productPrices), 'data-slider-max' => max($productPrices), 'data-slider-step' => '100', 'data-slider-value' => '['.$minPrice.','.$maxPrice.']'])?>
+			<?= Html::input('text','','', ['id' => 'ex3', 'class' => 'span2', 'data-slider-min' => min($productPrices), 'data-slider-max' => max($productPrices), 'data-slider-step' => '100', 'data-slider-value' => '['.$minPrice.','.$maxPrice.']'])?>
 			<span class='price-range-label'><i class='fa fa-rub'></i> <?= max($productPrices)?></span>
 		</div>
 		<?
