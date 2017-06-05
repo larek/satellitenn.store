@@ -73,13 +73,13 @@ class ProductController extends Controller
               $file_ext = pathinfo($_FILES['Product']['name']['photo'])['extension'];
               $file_new_name = md5($file_name)."_".time().".".$file_ext; 
 
-              $expensions= array("jpeg","jpg","png");
+              $expensions= array("jpeg","jpg","png","JPEG","JPG","PNG");
               
               if(in_array($file_ext,$expensions)=== false){
                  $errors[]="extension not allowed, please choose a JPEG or PNG file.";
               }
               
-              if($file_size > 2097152) {
+              if($file_size > 20971520) {
                  $errors[]='File size must be excately 2 MB';
               }
               
