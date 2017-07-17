@@ -12,6 +12,14 @@ $config = [
         'admin' => [
             'class' => 'app\modules\admin\Module',
             'layout' => 'admin'
+        ],
+        'rent' => [
+            'class' => 'app\modules\rent\Module',
+            'layout' => 'admin'
+        ],
+        'rentbox' => [
+            'class' => 'app\modules\rentbox\Module',
+            'layout' => 'rentbox'
         ]
     ],
     'components' => [

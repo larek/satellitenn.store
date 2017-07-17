@@ -25,15 +25,28 @@ AppRentboxAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-<nav id="w0" class="navbar-inverse navbar-fixed-top navbar">
-    <div class="container">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
         <div class="navbar-header">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span></button><a class="navbar-brand" href="/index.php">Satellite</a></div>
-        
-    </div>
-</nav>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Satellite</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li ><a href='/catalog'>Магазин</a></li>
+            <li class='active'><a href="">Прокат</a></li>
+            <!-- <li><a href="#">Производство</a></li> -->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
 
     <div class="container">
         <?//= Breadcrumbs::widget([
