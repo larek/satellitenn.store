@@ -97,7 +97,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
         <li><?= Html::a('<i class="fa fa-book"></i> Контакты',['site/pages','id' => 'kontakty'])?></li>
         <li><?= Html::a('<i class="fa fa-credit-card"></i> Оплата',['site/pages' , 'id' => 'oplata'])?></li>
         <li><?= Html::a('<i class="fa fa-truck"></i> Доставка',['site/pages', 'id' => 'dostavka'])?></li>
-        <li><?= Html::a('<i class="fa fa-clock-o"></i> Прокат','http://rentbox.satellitenn.ru')?></li>
+        <li><?= Html::a('<i class="fa fa-clock-o"></i> Прокат',['rentbox/default'])?></li>
 
         
       </ul>

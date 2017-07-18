@@ -98,6 +98,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
                         <?= Html::a('Каталог',['site/catalog'])?>
                     </li>
                     <li><?= Html::a('Прокат',['rentbox/default']);?></li>
+                    <li><?= Html::a('Производство',['production/index']);?></li>
                     <li>
                         <?= Html::a('Контакты',['site/pages', 'id' => 'kontakty'])?>
                     </li>
