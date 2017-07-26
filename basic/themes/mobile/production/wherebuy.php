@@ -83,15 +83,10 @@ $this->registerCssFile('https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/j
 			    </strong>
 			</p>
 			<p><strong><span style="font-size: 14pt;">Воронеж</span></strong></p>
- -			<ul>
- -			    <li><strong><strong>у</strong>л.&nbsp;<span class="js-extracted-address" data-params="address=ул. Томаровича&amp;ids=159596311794946205" data-action="map-up.showAddress">Текстильщиков</span>, д. 5 "Б" корп. 3 (въезд с ул. Солнечная), Интеренет-магазин "ВоронежАвто.RU" т.&nbsp;8(473)257-52-51,&nbsp;<strong>&nbsp;+7-<span class="wmi-callto">920-229-52-51</span>,&nbsp;</strong></strong>&nbsp;<a href="http://www.voronezhavto.ru/">http://www.voronezhavto.ru</a></li>
- -			</ul>
- -			<p><span style="font-size: 14pt;"><strong><span class="shop-phone"><strong><strong><strong>Челябинск</strong></strong></strong></span></strong>
- -			    </span>
- -			</p>
- -			<ul>
- -			    <li><strong><span class="shop-phone">у</span><span class="js-extracted-address" data-params="address=Ул. Автодорожная 12&amp;ids=158188936911391299" data-action="map-up.showAddress">л. Автодорожная 12, с</span>троение 1,&nbsp; Магазин "АвтоTrend", т. +7(351) <span class="wmi-callto">223-69-23</span>, +7 <span class="wmi-callto">(351)223-36-74, </span></strong> <a href="http://www.cartrunk.ru">www.cartrunk.ru</a></li>
- -			</ul>
+ 			<ul>
+ 			    <li><strong><strong>у</strong>л.&nbsp;<span class="js-extracted-address" data-params="address=ул. Томаровича&amp;ids=159596311794946205" data-action="map-up.showAddress">Текстильщиков</span>, д. 5 "Б" корп. 3 (въезд с ул. Солнечная), Интеренет-магазин "ВоронежАвто.RU" т.&nbsp;8(473)257-52-51,&nbsp;<strong>&nbsp;+7-<span class="wmi-callto">920-229-52-51</span>,&nbsp;</strong></strong>&nbsp;<a href="http://www.voronezhavto.ru/">http://www.voronezhavto.ru</a></li>
+ 			</ul>
+ 			
 			
 		</div>
 	</div>
