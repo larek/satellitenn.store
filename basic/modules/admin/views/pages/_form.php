@@ -20,7 +20,7 @@ use dosamigos\tinymce\TinyMce;
     <?= $form->field($model, 'title')->textInput(['maxlength' => 250]) ?>
 
     <?= $form->field($model, 'content')->widget(TinyMce::className(), [
-                'options' => ['rows' => 6],
+                'options' => ['rows' => 20],
                 'language' => 'ru',
                 'clientOptions' => [
                     'plugins' => [

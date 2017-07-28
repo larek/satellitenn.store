@@ -1,7 +1,7 @@
 <?php
 
 namespace app\controllers;
-
+use app\modules\admin\models\Pages;
 class ProductionController extends \yii\web\Controller
 {
     public function actionIndex()
@@ -11,7 +11,15 @@ class ProductionController extends \yii\web\Controller
 
     // Single View
     public function actionSingle($id){
-    	return $this->render($id);
+    	$model = false;
+    	switch ($id) {
+    		case 'wherebuy':
+    			$model = Pages::findOne(6);
+    			break;
+    	}
+    	return $this->render($id,[
+    			'model' => $model
+    		]);
     }
 
 }
