@@ -94,6 +94,7 @@ $config = [
                 'callback' => 'site/callback',
                 'product/<id>' => 'site/product',
                 'pages/<id>' => 'site/pages',
+                'production/<id>' => 'production/single',
                 'admin/product/search/<id>' => 'admin/product/index',
                 'admin/content/<id>' => 'admin/content/update',
                 'admin/cart-setting/<id>' => 'admin/cart-setting/update',
