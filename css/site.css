@@ -498,8 +498,8 @@ span.cross-line-2 {
 }
 
 .list-block{
-    -moz-column-count: 5; /* Ð”Ð»Ñ Firefox */
-    -webkit-column-count: 5; /* Ð”Ð»Ñ Safari Ð¸ Chrome */
+    -moz-column-count: 5; /* Ãâ€ÃÂ»Ã‘Â Firefox */
+    -webkit-column-count: 5; /* Ãâ€ÃÂ»Ã‘Â Safari ÃÂ¸ Chrome */
     column-count: 5;
     text-transform: capitalize;
 }
@@ -857,7 +857,7 @@ span.slide_title {
 
 .card.hovercard {
     position: relative;
-    padding-top: 0;
+    padding-top: 20px;
     overflow: hidden;
     text-align: center;
     background-color: rgba(214, 224, 226, 0.2);
@@ -893,8 +893,6 @@ span.slide_title {
 
 .card.hovercard .avatar {
     position: relative;
-    top: -50px;
-    margin-bottom: -50px;
 }
 
 .card.hovercard .avatar img {

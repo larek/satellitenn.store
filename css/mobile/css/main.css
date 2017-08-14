@@ -3194,7 +3194,7 @@ span.product-price {
 
 .card.hovercard {
     position: relative;
-    padding-top: 0;
+    padding-top: 20px;
     overflow: hidden;
     text-align: center;
     background-color: rgba(214, 224, 226, 0.2);
@@ -3230,8 +3230,6 @@ span.product-price {
 
 .card.hovercard .avatar {
     position: relative;
-    top: -50px;
-    margin-bottom: -50px;
 }
 
 .card.hovercard .avatar img {

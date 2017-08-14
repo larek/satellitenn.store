@@ -26,7 +26,7 @@ class SatelliteStyle extends AssetBundle
 
     ];
     public $js = [
-        'js/site.js?v=1.0.3'
+        'js/site.js?v=1.0.4'
     ];
     public $depends = [
         'yii\web\YiiAsset',

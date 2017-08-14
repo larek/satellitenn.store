@@ -35,9 +35,7 @@ $this->title = 'Mobile Satellitenn Store';
             <!-- Card -->
             <div class='col-sm-3 col-md-3 main-page-icon-box' onclick="window.location = '/catalog' ">
                 <div class="card hovercard">
-                    <div class="cardheader1">
-
-                    </div>
+                    
                     <div class="avatar">
                         <img alt="" src="/images/store-icon.svg">
                     </div>
@@ -55,9 +53,7 @@ $this->title = 'Mobile Satellitenn Store';
              <!-- Card -->
             <div class='col-sm-3 col-md-3 main-page-icon-box' onclick="window.location = '/rentbox' ">
                 <div class="card hovercard">
-                    <div class="cardheader2">
-
-                    </div>
+                    
                     <div class="avatar">
                         <img alt="" src="/images/renta-icon.svg">
                     </div>
@@ -75,9 +71,7 @@ $this->title = 'Mobile Satellitenn Store';
              <!-- Card -->
             <div class='col-sm-3 col-md-3 main-page-icon-box' onclick="window.location = '/production' ">
                 <div class="card hovercard">
-                    <div class="cardheader3">
-
-                    </div>
+                    
                     <div class="avatar">
                         <img alt="" src="/images/production-icon.svg">
                     </div>
@@ -95,9 +89,7 @@ $this->title = 'Mobile Satellitenn Store';
              <!-- Card -->
             <div class='col-sm-3 col-md-3 main-page-icon-box' onclick="window.location = '/production/gallery' ">
                 <div class="card hovercard">
-                    <div class="cardheader4">
-
-                    </div>
+                    
                     <div class="avatar">
                         <img alt="" src="/images/gallery-icon.svg">
                     </div>
@@ -115,17 +107,7 @@ $this->title = 'Mobile Satellitenn Store';
 
     </div>
 
-        
-        <br>
-        <div class="animated fadeinup delay-1">
-        <div class="p-20">
-      		<?= ListView::widget([
-      			'dataProvider' => $dataProvider,
-      			'itemView' => '_itemCategory',
-            'summary' => false
-      		]);?>
-        </div>
-		</div>
+       
         
         
         
