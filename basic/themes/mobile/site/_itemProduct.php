@@ -10,7 +10,7 @@ use yii\helpers\Html;
       <h4 class="news-title">
       <?= Html::a($model->title,['site/product','id' => $model->url]);?>
       </h4>
-      <p class="small"><?= $model->vendor->title;?></p>
+      <p class="small"><? if(isset($model->vendor->title)){ $model->vendor->title;} ?></p>
       <span class='price'><?= number_format($model->price,0," "," ");?> руб.</span>
       <div class='available'>
       <?if($model->available == 1):?>

@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
 						</tr>
                         <tr>
                             <td>Производитель</td>
-                            <td><?= $model->vendor->title?></td>
+                            <td><? if(isset($model->vendor->title)){ $model->vendor->title;} ?></td>
                         </tr>
 						<tr>
 							<td>Цена</td>

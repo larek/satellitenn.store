@@ -10,7 +10,7 @@ use yii\helpers\Html;
         <?= Html::a($model->title,['site/product','id' => $model->url]);?>
       </div>
     <div class="item-description text-center">
-    <p><?= $model->vendor->title;?></p>
+    <p><? if(isset($model->vendor->title)){ $model->vendor->title;}?></p>
     <p><span class='price'><?= number_format($model->price,0," "," ");?> руб.</span></p>
     </div>
     <div class='available'>
