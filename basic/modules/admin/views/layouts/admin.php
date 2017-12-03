@@ -50,6 +50,7 @@ AppAsset::register($this);
                      ['label' => 'Настройки корзины', 'url' => ['/admin/cart-setting/update', 'id'=>1]],
                 ],
             ],
+            ['label' => 'Прокат', 'url' => ['/rent/default/index']],
             
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
