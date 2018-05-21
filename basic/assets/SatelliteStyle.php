@@ -18,7 +18,7 @@ class SatelliteStyle extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/sat_style.css?v=2.3.9',
+        'css/sat_style.css?v=2.4.0',
         'css/site.css?v=2.4.4',
         'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300',
         '/bower_components/font-awesome/css/font-awesome.min.css'

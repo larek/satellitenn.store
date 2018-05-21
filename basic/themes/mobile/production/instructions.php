@@ -20,10 +20,7 @@ $this->registerCssFile('https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/j
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-3">
-			<?= Yii::$app->controller->renderPartial('_sideMenu');?>
-		</div>
-		<div class="col-md-9">
+		<div class="col-md-12">
 			<p>
 		        <a data-fancybox href="/images/images/2016/insr1.jpg"><img src="/images/images/2016/insr1.jpg" class="img-responsive" /></a>
 		    </p>

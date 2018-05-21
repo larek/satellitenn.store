@@ -98,7 +98,8 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
                         <?= Html::a('Каталог',['site/catalog'])?>
                     </li>
                     <li><?= Html::a('Прокат',['rentbox/default']);?></li>
-                    <li><?= Html::a('Производство',['production/index']);?></li>
+                    <li><?= Html::a('О нас',['production/index']);?></li>
+                    <li><?= Html::a('Галерея',['production/gallery']);?></li>
                     <li>
                         <?= Html::a('Контакты',['site/pages', 'id' => 'kontakty'])?>
                     </li>
@@ -317,8 +318,11 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
              <li>
             <?= Html::a('Прокат','http://rentbox.satellitenn.ru',['class' => 'btn btn-secondary-footer'])?>
             </li>
+
+             <li>
+            <?= Html::a('Инструкция',['production/instructions'],['class' => 'btn btn-secondary-footer'])?>
+            </li>
         
-            
         
         </ul>
         

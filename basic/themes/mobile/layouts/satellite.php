@@ -98,7 +98,9 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
         <li><?= Html::a('<i class="fa fa-credit-card"></i> Оплата',['site/pages' , 'id' => 'oplata'])?></li>
         <li><?= Html::a('<i class="fa fa-truck"></i> Доставка',['site/pages', 'id' => 'dostavka'])?></li>
         <li><?= Html::a('<i class="fa fa-clock-o"></i> Прокат',['rentbox/default'])?></li>
-        <li><?= Html::a('<i class="glyphicon glyphicon-cog"></i> Производство', ['production/index'])?></li>
+        <li><?= Html::a('<i class="glyphicon glyphicon-cog"></i> О нас', ['production/index'])?></li>
+        <li><?= Html::a('<i class="glyphicon glyphicon-camera"></i> Галерея', ['production/gallery'])?></li>
+        <li><?= Html::a('<i class="glyphicon glyphicon-info-sign"></i> Инструкция', ['production/instructions'])?></li>
 
         
       </ul>

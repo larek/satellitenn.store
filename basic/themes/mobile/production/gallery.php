@@ -5,7 +5,6 @@
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 $this->title = 'Галерея';
-$this->params['breadcrumbs'][] = ['label' => 'Производство', 'url' => ['production/index']];
 $this->params['breadcrumbs'][] = $this->title;
 $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerCssFile('https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css');
@@ -20,9 +19,6 @@ $this->registerCssFile('https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/j
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-3">
-			<?= Yii::$app->controller->renderPartial('_sideMenu');?>
-		</div>
 		<div class="">
 			<div class="row">
 
