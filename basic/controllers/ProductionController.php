@@ -26,7 +26,7 @@ class ProductionController extends \yii\web\Controller
 
     // Gallery Page
     public function actionGallery(){
-        $model = Gallery::find()->all();
+        $model = Gallery::find()->orderBy(['id' => SORT_DESC])->all();
         return $this->render('gallery',[
                 'model' => $model
             ]);
