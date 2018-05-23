@@ -58,7 +58,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
                 
             </li>
             <li>
-                <?= Html::a('<i class="fa fa-vk"></i>','https://vk.com/satellitenn',['class'=>'callback-header-link','title'=>'Вконтакте','target' => '_blank']);?>
+                <?= Html::a('<i class="fab fa-vk"></i>','https://vk.com/satellitenn',['class'=>'callback-header-link','title'=>'Вконтакте','target' => '_blank']);?>
             </li>
             
             <!-- facebook -->
