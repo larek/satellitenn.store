@@ -36,7 +36,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
       <!-- Toolbar -->
       <div id="toolbar" class="primary-color z-depth-1">
         <div class="open-left" id="open-left" data-activates="slide-out-left">
-          <i class="fa fa-navicon"></i>
+          <i class="fas fa-bars"></i>
         </div>
         <h1 class='title'>
             <a href='/'>
@@ -62,7 +62,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
             <h2 class="heading white-text">Satellite</h2>
             
             <div class="footer-icons">
-              <a class="callback-header-link" href="https://vk.com/satellitenn" title="Вконтакте" target="_blank"><i class="fa fa-vk"></i></a>
+              <a class="callback-header-link" href="https://vk.com/satellitenn" title="Вконтакте" target="_blank"><i class="fab fa-vk"></i></a>
             
             </div>
           </div>
@@ -94,10 +94,10 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
         <li><?= Html::a('<i class="fa fa-home"></i> Главная',['site/index'])?></li>
         <li><?= Html::a('<i class="fa fa-th"></i> Каталог',['site/catalog'])?></li>
         <li><?= Html::a('<i class="fa fa-shopping-cart"></i> Корзина',['site/cart'])?></li>
-        <li><?= Html::a('<i class="fa fa-book"></i> Контакты',['site/pages','id' => 'kontakty'])?></li>
+        <li><?= Html::a('<i class="fa fa-book"></i> Контакты',['site/contacts'])?></li>
         <li><?= Html::a('<i class="fa fa-credit-card"></i> Оплата',['site/pages' , 'id' => 'oplata'])?></li>
         <li><?= Html::a('<i class="fa fa-truck"></i> Доставка',['site/pages', 'id' => 'dostavka'])?></li>
-        <li><?= Html::a('<i class="fa fa-clock-o"></i> Прокат',['rentbox/default'])?></li>
+        <li><?= Html::a('<i class="far fa-clock"></i> Прокат',['rentbox/default'])?></li>
         <li><?= Html::a('<i class="glyphicon glyphicon-cog"></i> О нас', ['production/index'])?></li>
         <li><?= Html::a('<i class="glyphicon glyphicon-camera"></i> Галерея', ['production/gallery'])?></li>
         <li><?= Html::a('<i class="glyphicon glyphicon-info-sign"></i> Инструкция', ['production/instructions'])?></li>

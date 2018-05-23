@@ -101,7 +101,7 @@ $route = Yii::$app->urlManager->parseRequest(Yii::$app->request)[0];
                     <li><?= Html::a('О нас',['production/index']);?></li>
                     <li><?= Html::a('Галерея',['production/gallery']);?></li>
                     <li>
-                        <?= Html::a('Контакты',['site/pages', 'id' => 'kontakty'])?>
+                        <?= Html::a('Контакты',['site/contacts'])?>
                     </li>
 
                     

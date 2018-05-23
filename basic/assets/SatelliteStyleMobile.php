@@ -26,7 +26,7 @@ class SatelliteStyleMobile extends AssetBundle
         'css/mobile/css/swiper.min.css',
         'css/mobile/css/normalize.css',
         'css/mobile/css/main.css?v=1.0.7',
-        '/bower_components/font-awesome/css/font-awesome.min.css'
+        'https://use.fontawesome.com/releases/v5.0.13/css/all.css'
 
 
     ];
