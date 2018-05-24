@@ -50,7 +50,7 @@ class DefaultController extends Controller
 
     // Get user gallery
     public function actionGetUserPortfolio(){
-        $model = Gallery::find()->all();
+        $model = Gallery::find()->orderBy(['id' => SORT_DESC])->all();
         $data = [];
         foreach($model as $item){
             array_push($data, ['id' => $item->id, 'img' => $item->image]);
