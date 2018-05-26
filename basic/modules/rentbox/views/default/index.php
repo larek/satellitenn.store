@@ -205,6 +205,35 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
 
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <div class="color-img-wrapper">
+                    <img class='color-img-400 color-img img-responsive' src="/images/trailer.jpg" alt="...">
+                </div>
+                <div class="caption">
+                    <h3>Прицеп грузовой для легкового автомобиля</h3>
+                    <table class="table table-striped">
+                        <tr>
+                          <td colspan='2'>Категория B</td>
+                        </tr>
+                        <tr>
+                          <td colspan='2'>Двухосный</td>
+                        </tr>
+                        <tr>
+                            <td>Кузов</td>
+                            <td>3.8 м / 1.7 м / 1.7 м</td>
+                        </tr>
+                        <tr>
+                            <td>Грузоподъемность</td>
+                            <td>700 кг</td>
+                        </tr>
+                    </table>
+
+                    <p><span class="btn btn-default btn-color" id='trailer' role="button">Выбрать</span></p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -316,28 +345,25 @@ $this->params['breadcrumbs'][] = $this->title;
       <!-- modal body -->
     <div class="row">
         <div class="col-md-12">
-        <table class='table table-striped table-bordered'>
+        <table class='table table-bordered'>
             <tbody>
                 <tr>
-                    <th colspan='2' class='text-center'>
+                    <th class='text-center'>
                         Ваш выбор
                     </th>
                 </tr>
                 <tr>
-                    <td>Автобокс</td>
-                    <td><span class="activeBox"></span></td>
-                </tr>
-                <tr>
-                    <td>Прокат поперечин</td>
-                    <td><span class="activePlace"></span></td>
-                </tr>
-                <tr>
-                    <td style='width:50%'>Срок аренды</td>
-                    <td><span class="rangeDay"></span></td>
+                  <td>
+                    <ul class='resultInfo'>
+                      <li><span class="activeBox"></span></li>
+                      <li><span class="activePlace"></span></li>
+                      <li>Срок аренды: <span class="rangeDay"></span> дн</li>
+                    </ul>
+                  </td>
                 </tr>
                 
                 <tr>
-                    <td colspan='2' class='text-center'>
+                    <td class='text-center active'>
                         <span class="priceRent"></span>
                     </td>
                 </tr>

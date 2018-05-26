@@ -182,3 +182,7 @@ width:100%;
 }
 
 /*End Owl Carousel*/
+
+.resultInfo li{
+  list-style: none;
+}
