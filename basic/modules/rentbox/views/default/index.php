@@ -451,12 +451,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="row">
 <div class="col-md-12">
-<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A19ad4064194d7b02b67b8db622c555228de9a7b9f58179528626dc04047096c4&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A19ad4064194d7b02b67b8db622c555228de9a7b9f58179528626dc04047096c4&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
 </div>
 </div>
 <br><br>
    <div class='row text-center'>
-       <a href='http://satellitenn.store' class="btn btn-default">Хочу купить</a>
+       <a href='http://satellitenn.ru/category/avtoboksy-4' class="btn btn-default">Хочу купить</a>
    </div>
 
     
