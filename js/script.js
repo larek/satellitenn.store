@@ -177,8 +177,8 @@ $(document).ready(function() {
     }
 
     data = active_box == 'trailer' ? {
-      'rangeDay': rangeDay,
-      'priceRent': 500*rangeDay,
+      'rangeDay': rangeDay == 0 ? 1 : rangeDay,
+      'priceRent': rangeDay == 0 ? 500 : 500*rangeDay,
       'rangeDates': $('.date-to').val() + ' - ' + $('.date-from').val(),
     } : {
       'priceCategory': priceCategory,
@@ -187,7 +187,7 @@ $(document).ready(function() {
       'active_placeName': places[active_place]['name'],
       'priceBox': priceBox,
       'pricePlace': pricePlace,
-      'rangeDay': rangeDay,
+      'rangeDay': rangeDay == 0 ? 1 : rangeDay,
       'rangeDates': $('.date-to').val() + ' - ' + $('.date-from').val(),
       'priceRent': priceBox + pricePlace,
     };
