@@ -18,7 +18,7 @@ class AppRentboxAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site-rentbox.css?v=1.0.2',
+        'css/site-rentbox.css?v=1.0.3',
         'bower_components/font-awesome/css/font-awesome.min.css',
         'bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css',
         'bower_components/fotorama/fotorama.css',
@@ -27,7 +27,7 @@ class AppRentboxAsset extends AssetBundle
         'bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
         'bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js',
         'bower_components/fotorama/fotorama.js',
-        'js/script.js?v=2.0.3'
+        'js/script.js?v=2.0.4'
 
     ];
     public $depends = [

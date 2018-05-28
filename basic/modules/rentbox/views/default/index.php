@@ -321,7 +321,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-xs-12 col-ms-12 col-sm-12 text-center controls">
             <div class="checkbox">
                 <label>
-                  <input type="checkbox" class='checkRules'> C <span class='btn-rules'>условиями аренды</span> оборудования ознакомлен
+                  <span class='btn-rules'>Условия аренды</span>
                 </label>
               </div>
         </div>

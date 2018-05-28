@@ -107,7 +107,7 @@ $(document).ready(function() {
 
   // Click to final button. Check date, active product, rules and show calculate result
   $('.btn-calc').click(function (){
-    if (active_box !== null && (active_place !== null || active_place == null && active_box == 'trailer') && $('.date-to').val() != '' && $('.date-from').val() !== '' && $('.checkRules').is(':checked')) {
+    if (active_box !== null && (active_place !== null || active_place == null && active_box == 'trailer') && $('.date-to').val() != '' && $('.date-from').val() !== ''){
       var result = Calculate();
       $('.priceRent').html(result.priceRent + ' руб.');
       $('.activeBox').html(boxes[active_box]['name']);
@@ -115,7 +115,7 @@ $(document).ready(function() {
       $('.rangeDay').html(result.rangeDay);
       $('.resultCalculator').modal();
     } else {
-      $('.alertContent').html('Чтобы узнать стоимость и забронировать автобокс, выберете необходимый бокс, место установки и даты аренды и согласитесь с условиями аренды');
+      $('.alertContent').html('Чтобы узнать стоимость и забронировать автобокс, выберете необходимый бокс, место установки и даты аренды');
       $('.modalAlert').modal();
     }
   });
