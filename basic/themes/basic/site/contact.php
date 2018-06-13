@@ -83,7 +83,7 @@ $this->params['breadcrumbs'][] = $this->title;
   <!-- Map Container -->
   <div class='row'>
     <div class='col-md-12'>
-      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A74698504bf6864905886c9f5c846faf5f31261f0dc7e20831b8e9d0183f3e566&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=false"></script>
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A74698504bf6864905886c9f5c846faf5f31261f0dc7e20831b8e9d0183f3e566&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
     </div>
   </div>
   <!-- End Map Container -->
@@ -151,6 +151,15 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class='col-md-4'>Воронеж,<br/> ул. Текстильщиков, д. 5 "Б" корп. 3<br/>(въезд с ул. Солнечная)</div>
                 <div class='col-md-4'>+7 (473) 257 52 51<br/> +7 (920) 229 52 51</div>
                 <div class='col-md-4'><a href='https://www.voronezhavto.ru/' target='_blank'>Интернет-магазин "ВоронежАвто.RU"</a></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class='row'>
+                <div class="col-md-4">г. Пермь,<br/> бульвар Гагарина 103</div>
+                <div class="col-md-4">+7 (342) 262 11 77<br/> +7 (963) 018 66 11<br/> +7 (912) 785 40 40</div>
+                <div class="col-md-4"><a href='https://xn----7sbbadnwqlh5afnl2d.xn--p1ai/' target='_blank'>Магазин "Фаркоп-багажник.рф"</a></div>
               </div>
             </td>
           </tr>
