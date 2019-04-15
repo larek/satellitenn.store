@@ -77,37 +77,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class='alert alert-info alert-info-satellite'>1. Выберите автобокс</div>
     <div class="row">
 
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="thumbnail">
-                <div class="color-img-wrapper">
-                    <img class='color-img-400 color-img img-responsive' src="/images/prokat400.jpg" alt="...">
-                </div>
-                <div class="caption">
-                    <h3>Автобокс "Satellite 400"</h3>
-                    <table class="table table-striped">
-
-                        <tr>
-                            <td>Объем</td>
-                            <td>400 литров</td>
-                        </tr>
-                        <tr>
-                            <td>Габариты</td>
-                            <td>139x90x38</td>
-                        </tr>
-                        <tr>
-                            <td>Масса</td>
-                            <td>12 кг</td>
-                        </tr>
-                        <tr>
-                            <td>Грузоподъемность</td>
-                            <td>до 60 кг.</td>
-                        </tr>
-                    </table>
-
-                    <p><span class="btn btn-default btn-color" id='400' role="button">Выбрать</span></p>
-                </div>
-            </div>
-        </div>
 
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="thumbnail">
