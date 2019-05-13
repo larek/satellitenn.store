@@ -103,42 +103,6 @@ $this->params['breadcrumbs'][] = $this->title;
           <tr>
             <td>
               <div class='row'>
-                <div class='col-md-4'>Москва,<br/> ул. Проспект Мира, 222</div>
-                <div class='col-md-4'>+7 (495) 984 04 35<br/> +7 (800) 775 03 89</div>
-                <div class='col-md-4'><a href='https://avtobagazniki.ru' target='_blank'>Магазин багажных систем "Автобагажники.рф"</a></div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class='row'>
-                <div class='col-md-4'>Москва,<br/> ул. Вагоноремонтная, д. 10</div>
-                <div class='col-md-4'>+7 (495) 236 74 86<br/> +7 (800) 775 62 37</div>
-                <div class='col-md-4'><a href='https://bagazniki-avtoboxy.ru/' target='_blank'>Магазин багажных систем "Багажники-автобоксы"</a></div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class='row'>
-                <div class='col-md-4'>Москва, 18-й км МКАД, г. Дзержинский,<br/> ул. Алексеевская, д. 2А,<br/> ТЦ "Спорт-Экстрим" (цокольный этаж), павильон Ц2</div>
-                <div class='col-md-4'>+7 (495) 125 34 34<br/> +7 (800) 775 35 52</div>
-                <div class='col-md-4'><a href='http://www.boxteam.ru/' target='_blank'>Магазин багажных систем "BOXTEAM"</a></div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class='row'>
-                <div class='col-md-4'>Москва,<br/> Рублевское ш. 68 А стр.2</div>
-                <div class='col-md-4'>+7 (495) 162 88 66<br/> +7 (800) 775 82 01</div>
-                <div class='col-md-4'><a href='https://boxnation.ru/' target='_blank'>Магазин багажных систем "BOXNATION"</a></div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class='row'>
                 <div class='col-md-4'>Санкт-Петербург,<br/>  ул. Дальневосточный пр., д.1</div>
                 <div class='col-md-4'>+7 (921) 863 07 77</div>
                 <div class='col-md-4'><a href='http://auto-boxs.ru/' target='_blank'>Компания "AUTOBOX"</a></div>
@@ -151,15 +115,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class='col-md-4'>Воронеж,<br/> ул. Текстильщиков, д. 5 "Б" корп. 3<br/>(въезд с ул. Солнечная)</div>
                 <div class='col-md-4'>+7 (473) 257 52 51<br/> +7 (920) 229 52 51</div>
                 <div class='col-md-4'><a href='https://www.voronezhavto.ru/' target='_blank'>Интернет-магазин "ВоронежАвто.RU"</a></div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class='row'>
-                <div class="col-md-4">г. Пермь,<br/> бульвар Гагарина 103</div>
-                <div class="col-md-4">+7 (342) 262 11 77<br/> +7 (963) 018 66 11<br/> +7 (912) 785 40 40</div>
-                <div class="col-md-4"><a href='https://xn----7sbbadnwqlh5afnl2d.xn--p1ai/' target='_blank'>Магазин "Фаркоп-багажник.рф"</a></div>
               </div>
             </td>
           </tr>
