@@ -11,7 +11,7 @@ use yii\helpers\Html;
       </div>
     <div class="item-description text-center">
     <p><? if(isset($model->vendor->title)){ $model->vendor->title;}?></p>
-    <p><span class='price'><?= number_format($model->price,0," "," ");?> руб.</span></p>
+    <p><span class='price'><?= $model->price !== 0 && $model->price !== NULL ? number_format($model->price,0," "," ") . 'руб.' : 'По запросу';?></span></p>
     </div>
     <div class='available'>
       <?if($model->available == 1):?>
