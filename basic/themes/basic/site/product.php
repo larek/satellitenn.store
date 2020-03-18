@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </tr>
 						<tr>
 							<td>Цена</td>
-							<td><span class='price price-product-page'><?= if($model->price !== 0 && $model->price !== NULL) ? number_format($model->price,0," "," ") . ' руб.'  : 'По запросу'?> </span></td>
+							<td><span class='price price-product-page'><?= $model->price !== 0 && $model->price !== NULL ? number_format($model->price,0," "," ") . ' руб.'  : 'По запросу'?> </span></td>
 						</tr>
                         <tr>
                             <td>Наличие</td>
