@@ -11,7 +11,7 @@ use yii\helpers\Html;
       <?= Html::a($model->title,['site/product','id' => $model->url]);?>
       </h4>
       <p class="small"><? if(isset($model->vendor->title)){ $model->vendor->title;} ?></p>
-      <span class='price'><?= number_format($model->price,0," "," ");?> руб.</span>
+      <span class='price'><?= $model->price !== 0 && $model->price !== NULL ? number_format($model->price,0," "," ") . 'руб.' : 'По запросу';?></span>
       <div class='available'>
       <?if($model->available == 1):?>
       <span class='product-cart-label-success'><i class="fa fa-check-square-o"></i> В наличии</span>
