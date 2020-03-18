@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="center-align p-20">
   <span class="small grey-text"><? if(isset($model->vendor->title)){ $model->vendor->title; }?></span>
   <h3 class="m-0"><strong><?= $model->title?></strong></h3>
-  <span class='product-price'><?= number_format($model->price,0," "," ")?> руб. </span>
+  <span class='product-price'><?= $model->price !== 0 && $model->price !== NULL ? number_format($model->price,0," "," ") . 'руб.' : 'По запросу'?> </span>
   <div class='available'>
       <?if($model->available == 1):?>
       <span class='product-cart-label-success'><i class="fa fa-check-square-o"></i> В наличии</span>
